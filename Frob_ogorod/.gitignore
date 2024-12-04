@@ -1,0 +1,14 @@
+# Ignore all .bak files in the models directory
+models/**/*.bak
+models/**/*\~
+# Ignore build artifacts and other unnecessary files from ROS2 packages
+/**/build
+/**/install
+/**/log
+
+/**/.idea
+# Ignore temporary files and directories
+*.swp
+*.swo
+*.tmp
+*.temp
