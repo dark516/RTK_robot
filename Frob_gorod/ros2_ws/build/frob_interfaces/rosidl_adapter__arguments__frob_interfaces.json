@@ -1,0 +1,7 @@
+{
+  "package_name": "frob_interfaces",
+  "non_idl_tuples": [
+    "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/frob_interfaces:srv/Turn.srv",
+    "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/frob_interfaces:srv/Forward.srv"
+  ]
+}

@@ -1,0 +1,8 @@
+setuptools
+opencv-python
+cv_bridge
+rclpy
+sensor_msgs
+
+[test]
+pytest

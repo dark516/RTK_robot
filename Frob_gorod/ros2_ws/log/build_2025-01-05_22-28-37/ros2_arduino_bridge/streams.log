@@ -1,0 +1,36 @@
+[0.594s] Invoking command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ros2_arduino_bridge': AMENT_PREFIX_PATH=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ros2_arduino_bridge build --build-base /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/build install --record /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/install.log --single-version-externally-managed install_data
+[0.776s] running egg_info
+[0.776s] creating ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info
+[0.789s] writing ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/PKG-INFO
+[0.790s] writing dependency_links to ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/dependency_links.txt
+[0.790s] writing entry points to ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/entry_points.txt
+[0.790s] writing requirements to ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/requires.txt
+[0.790s] writing top-level names to ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/top_level.txt
+[0.790s] writing manifest file '../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/SOURCES.txt'
+[0.817s] reading manifest file '../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/SOURCES.txt'
+[0.817s] writing manifest file '../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info/SOURCES.txt'
+[0.817s] running build
+[0.817s] running build_py
+[0.818s] creating /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/build/lib/ros2_arduino_bridge
+[0.818s] copying ros2_arduino_bridge/arduino_bridge.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/build/lib/ros2_arduino_bridge
+[0.818s] copying ros2_arduino_bridge/__init__.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/build/lib/ros2_arduino_bridge
+[0.818s] copying ros2_arduino_bridge/connection.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/build/lib/ros2_arduino_bridge
+[0.818s] running install
+[0.821s] running install_lib
+[0.835s] creating /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages/ros2_arduino_bridge
+[0.835s] copying /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/build/lib/ros2_arduino_bridge/arduino_bridge.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages/ros2_arduino_bridge
+[0.835s] copying /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/build/lib/ros2_arduino_bridge/__init__.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages/ros2_arduino_bridge
+[0.835s] copying /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/build/lib/ros2_arduino_bridge/connection.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages/ros2_arduino_bridge
+[0.835s] byte-compiling /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages/ros2_arduino_bridge/arduino_bridge.py to arduino_bridge.cpython-312.pyc
+[0.836s] byte-compiling /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages/ros2_arduino_bridge/__init__.py to __init__.cpython-312.pyc
+[0.836s] byte-compiling /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages/ros2_arduino_bridge/connection.py to connection.cpython-312.pyc
+[0.836s] running install_data
+[0.837s] creating /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/share/ament_index/resource_index/packages
+[0.837s] copying resource/ros2_arduino_bridge -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/share/ament_index/resource_index/packages
+[0.837s] copying package.xml -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/share/ros2_arduino_bridge
+[0.837s] running install_egg_info
+[0.851s] Copying ../../build/ros2_arduino_bridge/ros2_arduino_bridge.egg-info to /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages/ros2_arduino_bridge-0.0.0-py3.12.egg-info
+[0.852s] running install_scripts
+[0.933s] Installing arduino_bridge script to /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/lib/ros2_arduino_bridge
+[0.933s] writing list of installed files to '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/install.log'
+[0.956s] Invoked command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ros2_arduino_bridge' returned '0': AMENT_PREFIX_PATH=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge/lib/python3.12/site-packages:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ros2_arduino_bridge build --build-base /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/build install --record /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_arduino_bridge/install.log --single-version-externally-managed install_data

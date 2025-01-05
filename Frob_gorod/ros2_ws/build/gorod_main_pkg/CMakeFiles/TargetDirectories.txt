@@ -1,0 +1,9 @@
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/gorod_main_pkg/CMakeFiles/uninstall.dir
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/gorod_main_pkg/CMakeFiles/gorod_main_pkg_uninstall.dir
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/gorod_main_pkg/CMakeFiles/test.dir
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/gorod_main_pkg/CMakeFiles/edit_cache.dir
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/gorod_main_pkg/CMakeFiles/rebuild_cache.dir
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/gorod_main_pkg/CMakeFiles/list_install_components.dir
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/gorod_main_pkg/CMakeFiles/install.dir
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/gorod_main_pkg/CMakeFiles/install/local.dir
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/gorod_main_pkg/CMakeFiles/install/strip.dir
