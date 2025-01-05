@@ -107,7 +107,7 @@ void loop() {
       }
       stop(); 
       break;
-    case 2:
+    case 2:  // Блокирующий поврот направо
       left_regulator.motor.set_pwmdir(150);
       right_regulator.motor.set_pwmdir(-150);
       delay(260);
@@ -116,7 +116,7 @@ void loop() {
         right_regulator.motor.set_pwmdir(-150);
       }
       stop();
-      break; // Блокирующий поврот направо
+      break;
     }
     resetCounts();
   }
