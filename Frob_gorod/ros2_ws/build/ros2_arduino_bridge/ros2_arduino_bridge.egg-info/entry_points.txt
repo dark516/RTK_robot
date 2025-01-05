@@ -1,2 +1,0 @@
-[console_scripts]
-arduino_bridge = ros2_arduino_bridge.arduino_bridge:main

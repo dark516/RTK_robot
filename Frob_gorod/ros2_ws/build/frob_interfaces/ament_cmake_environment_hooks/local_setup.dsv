@@ -1,4 +1,0 @@
-source;share/frob_interfaces/environment/ament_prefix_path.sh
-source;share/frob_interfaces/environment/library_path.sh
-source;share/frob_interfaces/environment/path.sh
-source;share/frob_interfaces/environment/pythonpath.sh

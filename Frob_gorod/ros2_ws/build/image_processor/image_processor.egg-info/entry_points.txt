@@ -1,2 +1,0 @@
-[console_scripts]
-image_processor = image_processor.image_processor:main
