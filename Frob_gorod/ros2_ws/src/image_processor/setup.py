@@ -5,6 +5,9 @@ package_name = 'image_processor'
 setup(
     name=package_name,
     version='0.0.0',
+    data_files=[
+        ('share/' + package_name + '/resource', ['resource/best1.pt']),
+    ],
     packages=[package_name],
     install_requires=['setuptools'],
     zip_safe=True,
