@@ -1,0 +1,34 @@
+[1.047s] Invoking command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/image_processor': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/image_processor build --build-base /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/image_processor/build install --record /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/image_processor/install.log --single-version-externally-managed install_data
+[1.185s] /home/dark516/.local/lib/python3.12/site-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[1.185s]   warnings.warn(msg)
+[1.279s] running egg_info
+[1.279s] creating ../../build/image_processor/image_processor.egg-info
+[1.293s] writing ../../build/image_processor/image_processor.egg-info/PKG-INFO
+[1.293s] writing dependency_links to ../../build/image_processor/image_processor.egg-info/dependency_links.txt
+[1.293s] writing entry points to ../../build/image_processor/image_processor.egg-info/entry_points.txt
+[1.293s] writing requirements to ../../build/image_processor/image_processor.egg-info/requires.txt
+[1.293s] writing top-level names to ../../build/image_processor/image_processor.egg-info/top_level.txt
+[1.294s] writing manifest file '../../build/image_processor/image_processor.egg-info/SOURCES.txt'
+[1.330s] reading manifest file '../../build/image_processor/image_processor.egg-info/SOURCES.txt'
+[1.331s] writing manifest file '../../build/image_processor/image_processor.egg-info/SOURCES.txt'
+[1.331s] running build
+[1.331s] running build_py
+[1.331s] creating /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/image_processor/build/lib/image_processor
+[1.332s] copying image_processor/__init__.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/image_processor/build/lib/image_processor
+[1.332s] copying image_processor/image_processor.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/image_processor/build/lib/image_processor
+[1.332s] running install
+[1.335s] running install_lib
+[1.351s] creating /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor/lib/python3.12/site-packages/image_processor
+[1.351s] copying /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/image_processor/build/lib/image_processor/__init__.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor/lib/python3.12/site-packages/image_processor
+[1.351s] copying /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/image_processor/build/lib/image_processor/image_processor.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor/lib/python3.12/site-packages/image_processor
+[1.351s] byte-compiling /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor/lib/python3.12/site-packages/image_processor/__init__.py to __init__.cpython-312.pyc
+[1.352s] byte-compiling /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor/lib/python3.12/site-packages/image_processor/image_processor.py to image_processor.cpython-312.pyc
+[1.353s] running install_data
+[1.354s] creating /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor/share/image_processor/resource
+[1.354s] copying resource/best1.pt -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor/share/image_processor/resource
+[1.395s] running install_egg_info
+[1.418s] Copying ../../build/image_processor/image_processor.egg-info to /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor/lib/python3.12/site-packages/image_processor-0.0.0-py3.12.egg-info
+[1.419s] running install_scripts
+[1.519s] Installing image_processor script to /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor/lib/image_processor
+[1.519s] writing list of installed files to '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/image_processor/install.log'
+[1.581s] Invoked command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/image_processor' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/image_processor build --build-base /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/image_processor/build install --record /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/image_processor/install.log --single-version-externally-managed install_data

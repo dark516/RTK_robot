@@ -1,0 +1,12 @@
+{
+  "package_name": "frob_interfaces",
+  "output_dir": "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces/rosidl_generator_type_description/frob_interfaces",
+  "idl_tuples": [
+    "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces/rosidl_adapter/frob_interfaces:srv/Turn.idl",
+    "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces/rosidl_adapter/frob_interfaces:srv/Forward.idl"
+  ],
+  "include_paths": [
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces"
+  ]
+}

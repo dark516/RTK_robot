@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "frob_interfaces/srv/Forward_Request",
+      "fields": [
+        {
+          "name": "dist",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "speed",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "frob_interfaces/srv/Forward_Request",
+      "hash_string": "RIHS01_d7d0913b2c0beadcb7dfbc349ff35265524a751b335baedbb415702479c2243a"
+    }
+  ]
+}

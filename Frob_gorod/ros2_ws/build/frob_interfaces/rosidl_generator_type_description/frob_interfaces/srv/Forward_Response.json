@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "frob_interfaces/srv/Forward_Response",
+      "fields": [
+        {
+          "name": "success",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "frob_interfaces/srv/Forward_Response",
+      "hash_string": "RIHS01_21141735ddeba26ebd904e09df5db093832ad60386cfa33d9070cf76fb7a798f"
+    }
+  ]
+}

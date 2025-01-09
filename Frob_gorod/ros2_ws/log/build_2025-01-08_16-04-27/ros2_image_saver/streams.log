@@ -1,0 +1,34 @@
+[1.073s] Invoking command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ros2_image_saver': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_image_saver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ros2_image_saver build --build-base /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_image_saver/build install --record /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_image_saver/install.log --single-version-externally-managed install_data
+[1.310s] running egg_info
+[1.311s] creating ../../build/ros2_image_saver/ros2_image_saver.egg-info
+[1.325s] writing ../../build/ros2_image_saver/ros2_image_saver.egg-info/PKG-INFO
+[1.326s] writing dependency_links to ../../build/ros2_image_saver/ros2_image_saver.egg-info/dependency_links.txt
+[1.326s] writing entry points to ../../build/ros2_image_saver/ros2_image_saver.egg-info/entry_points.txt
+[1.326s] writing requirements to ../../build/ros2_image_saver/ros2_image_saver.egg-info/requires.txt
+[1.326s] writing top-level names to ../../build/ros2_image_saver/ros2_image_saver.egg-info/top_level.txt
+[1.326s] writing manifest file '../../build/ros2_image_saver/ros2_image_saver.egg-info/SOURCES.txt'
+[1.360s] reading manifest file '../../build/ros2_image_saver/ros2_image_saver.egg-info/SOURCES.txt'
+[1.360s] adding license file 'LICENSE'
+[1.361s] writing manifest file '../../build/ros2_image_saver/ros2_image_saver.egg-info/SOURCES.txt'
+[1.361s] running build
+[1.361s] running build_py
+[1.361s] creating /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_image_saver/build/lib/ros2_image_saver
+[1.362s] copying ros2_image_saver/__init__.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_image_saver/build/lib/ros2_image_saver
+[1.362s] copying ros2_image_saver/image_saver.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_image_saver/build/lib/ros2_image_saver
+[1.362s] running install
+[1.366s] running install_lib
+[1.385s] creating /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver/lib/python3.12/site-packages/ros2_image_saver
+[1.386s] copying /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_image_saver/build/lib/ros2_image_saver/__init__.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver/lib/python3.12/site-packages/ros2_image_saver
+[1.386s] copying /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_image_saver/build/lib/ros2_image_saver/image_saver.py -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver/lib/python3.12/site-packages/ros2_image_saver
+[1.386s] byte-compiling /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver/lib/python3.12/site-packages/ros2_image_saver/__init__.py to __init__.cpython-312.pyc
+[1.386s] byte-compiling /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver/lib/python3.12/site-packages/ros2_image_saver/image_saver.py to image_saver.cpython-312.pyc
+[1.387s] running install_data
+[1.387s] creating /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver/share/ament_index/resource_index/packages
+[1.387s] copying resource/ros2_image_saver -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver/share/ament_index/resource_index/packages
+[1.388s] copying package.xml -> /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver/share/ros2_image_saver
+[1.388s] running install_egg_info
+[1.413s] Copying ../../build/ros2_image_saver/ros2_image_saver.egg-info to /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver/lib/python3.12/site-packages/ros2_image_saver-1.0.0-py3.12.egg-info
+[1.414s] running install_scripts
+[1.513s] Installing image_saver script to /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver/lib/ros2_image_saver
+[1.513s] writing list of installed files to '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_image_saver/install.log'
+[1.583s] Invoked command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ros2_image_saver' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_image_saver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ros2_image_saver build --build-base /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_image_saver/build install --record /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ros2_image_saver/install.log --single-version-externally-managed install_data

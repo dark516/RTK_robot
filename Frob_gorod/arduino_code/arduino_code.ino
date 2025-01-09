@@ -4,7 +4,7 @@
 
 #define BASE_SPEED 100
 
-int gray = 500;
+int gray = 560;
 //ЛЕВЫЙ МОТОР
 void __left_motor_enc(); //Заголовок функции
 //Создание экземпляра левого регулятора
@@ -31,8 +31,8 @@ void __right_motor_enc() {
   right_regulator.encoder.encoder_int();
 }
 
-LineSensor lline(A4);
-LineSensor rline(A5);
+LineSensor lline(A2);
+LineSensor rline(A1);
 PID linePid(0.4, 0.0, 0.0, 100);
 
 void setup() {
@@ -81,6 +81,19 @@ void loop() {
   if (state == 1) { //Если робот выключен
     left_regulator.motor.set_pwmdir(0);
     right_regulator.motor.set_pwmdir(0);
+//      left_regulator.motor.set_pwmdir(BASE_SPEED);
+//      right_regulator.motor.set_pwmdir(BASE_SPEED);
+//      delay(850);
+//      stop();
+//      left_regulator.motor.set_pwmdir(100);
+//      right_regulator.motor.set_pwmdir(-100);
+//      delay(340);
+//      while (lline.read() > gray){
+//        left_regulator.motor.set_pwmdir(100);
+//        right_regulator.motor.set_pwmdir(-100);
+//      }
+//      stop();
+//      exit(0);
     return;
   }
   
@@ -98,22 +111,22 @@ void loop() {
     switch (findMostFrequentNumber()) {
     case 0:  break; // Прямо
     case 1:      // Блокирующий поврот налево  
-      left_regulator.motor.set_pwmdir(-150);
-      right_regulator.motor.set_pwmdir(150);
-      delay(260);
-      while (rline.read() < gray){
-        left_regulator.motor.set_pwmdir(-150);
-        right_regulator.motor.set_pwmdir(150);
+      left_regulator.motor.set_pwmdir(-100);
+      right_regulator.motor.set_pwmdir(100);
+      delay(420);
+      while (rline.read() > gray){
+        left_regulator.motor.set_pwmdir(-100);
+        right_regulator.motor.set_pwmdir(100);
       }
       stop(); 
       break;
     case 2:  // Блокирующий поврот направо
-      left_regulator.motor.set_pwmdir(150);
-      right_regulator.motor.set_pwmdir(-150);
-      delay(260);
-      while (lline.read() < gray){
-        left_regulator.motor.set_pwmdir(150);
-        right_regulator.motor.set_pwmdir(-150);
+      left_regulator.motor.set_pwmdir(100);
+      right_regulator.motor.set_pwmdir(-100);
+      delay(420);
+      while (lline.read() > gray){
+        left_regulator.motor.set_pwmdir(100);
+        right_regulator.motor.set_pwmdir(-100);
       }
       stop();
       break;

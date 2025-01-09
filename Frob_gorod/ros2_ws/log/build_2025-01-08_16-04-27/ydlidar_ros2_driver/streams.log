@@ -1,0 +1,106 @@
+[0.451s] Invoking command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ydlidar_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ydlidar_ros2_driver -DCMAKE_INSTALL_PREFIX=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver
+[0.517s] -- The C compiler identification is GNU 13.3.0
+[0.569s] -- The CXX compiler identification is GNU 13.3.0
+[0.595s] -- Detecting C compiler ABI info
+[0.712s] -- Detecting C compiler ABI info - done
+[0.717s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.717s] -- Detecting C compile features
+[0.718s] -- Detecting C compile features - done
+[0.728s] -- Detecting CXX compiler ABI info
+[0.850s] -- Detecting CXX compiler ABI info - done
+[0.855s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.855s] -- Detecting CXX compile features
+[0.856s] -- Detecting CXX compile features - done
+[0.859s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.015s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.144s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.191s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.207s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.223s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.240s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.313s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.317s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.431s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.451s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.473s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.552s] -- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.616s] -- Found visualization_msgs: 5.3.5 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[1.638s] -- Found std_srvs: 5.3.5 (/opt/ros/jazzy/share/std_srvs/cmake)
+[1.658s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.779s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.780s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.781s] -- Configured cppcheck include dirs: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ydlidar_ros2_driver/src
+[1.781s] -- Configured cppcheck exclude dirs and/or files: 
+[1.782s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.782s] -- Configured cpplint exclude dirs and/or files: 
+[1.783s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.783s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.784s] -- Added test 'lint_cmake' to check CMake code style
+[1.784s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.786s] -- Added test 'uncrustify' to check C / C++ code style
+[1.786s] -- Configured uncrustify additional arguments: 
+[1.789s] -- Added test 'xmllint' to check XML markup files
+[1.791s] -- Configuring done (1.3s)
+[1.809s] -- Generating done (0.0s)
+[1.811s] -- Build files have been written to: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ydlidar_ros2_driver
+[1.832s] Invoked command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ydlidar_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ydlidar_ros2_driver -DCMAKE_INSTALL_PREFIX=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver
+[1.834s] Invoking command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ydlidar_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ydlidar_ros2_driver -- -j16 -l16
+[1.910s] [ 50%] [32mBuilding CXX object CMakeFiles/ydlidar_ros2_driver_client.dir/src/ydlidar_ros2_driver_client.cpp.o[0m
+[1.911s] [ 50%] [32mBuilding CXX object CMakeFiles/ydlidar_ros2_driver_node.dir/src/ydlidar_ros2_driver_node.cpp.o[0m
+[3.942s] [01m[K/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ydlidar_ros2_driver/src/ydlidar_ros2_driver_node.cpp:[m[K In lambda function:
+[3.942s] [01m[K/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ydlidar_ros2_driver/src/ydlidar_ros2_driver_node.cpp:163:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest_header[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.942s]   163 |     [&laser]([01;35m[Kconst std::shared_ptr<rmw_request_id_t> request_header[m[K,
+[3.942s]       |              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[3.942s] [01m[K/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ydlidar_ros2_driver/src/ydlidar_ros2_driver_node.cpp:164:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.943s]   164 |   [01;35m[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> req[m[K,
+[3.943s]       |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[3.943s] [01m[K/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ydlidar_ros2_driver/src/ydlidar_ros2_driver_node.cpp:165:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.943s]   165 |   [01;35m[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response[m[K) -> bool
+[3.943s]       |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[3.950s] [01m[K/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ydlidar_ros2_driver/src/ydlidar_ros2_driver_node.cpp:[m[K In lambda function:
+[3.950s] [01m[K/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ydlidar_ros2_driver/src/ydlidar_ros2_driver_node.cpp:173:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest_header[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.950s]   173 |     [&laser]([01;35m[Kconst std::shared_ptr<rmw_request_id_t> request_header[m[K,
+[3.950s]       |              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[3.950s] [01m[K/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ydlidar_ros2_driver/src/ydlidar_ros2_driver_node.cpp:174:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.951s]   174 |   [01;35m[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> req[m[K,
+[3.951s]       |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[3.951s] [01m[K/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/ydlidar_ros2_driver/src/ydlidar_ros2_driver_node.cpp:175:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.951s]   175 |   [01;35m[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response[m[K) -> bool
+[3.951s]       |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[5.839s] [ 75%] [32m[1mLinking CXX executable ydlidar_ros2_driver_node[0m
+[6.024s] [ 75%] Built target ydlidar_ros2_driver_node
+[7.719s] [100%] [32m[1mLinking CXX executable ydlidar_ros2_driver_client[0m
+[7.910s] [100%] Built target ydlidar_ros2_driver_client
+[7.920s] Invoked command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ydlidar_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ydlidar_ros2_driver -- -j16 -l16
+[7.961s] Invoking command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ydlidar_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ydlidar_ros2_driver
+[7.968s] -- Install configuration: ""
+[7.968s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/lib/ydlidar_ros2_driver/ydlidar_ros2_driver_node
+[7.970s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/lib/ydlidar_ros2_driver/ydlidar_ros2_driver_node" to ""
+[7.970s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/lib/ydlidar_ros2_driver/ydlidar_ros2_driver_client
+[7.975s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/lib/ydlidar_ros2_driver/ydlidar_ros2_driver_client" to ""
+[7.975s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/launch
+[7.975s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/launch/ydlidar_launch.py
+[7.975s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/launch/ydlidar.py
+[7.975s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/launch/ydlidar_launch_view.py
+[7.975s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/params
+[7.975s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/params/ydlidar.yaml
+[7.975s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/startup
+[7.975s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/startup/initenv.sh
+[7.976s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/config
+[7.976s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/config/ydlidar.rviz
+[7.976s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ament_index/resource_index/package_run_dependencies/ydlidar_ros2_driver
+[7.976s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ament_index/resource_index/parent_prefix_path/ydlidar_ros2_driver
+[7.976s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/environment/ament_prefix_path.sh
+[7.976s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/environment/ament_prefix_path.dsv
+[7.976s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/environment/path.sh
+[7.976s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/environment/path.dsv
+[7.976s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/local_setup.bash
+[7.976s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/local_setup.sh
+[7.976s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/local_setup.zsh
+[7.977s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/local_setup.dsv
+[7.977s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/package.dsv
+[7.977s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ament_index/resource_index/packages/ydlidar_ros2_driver
+[7.977s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/cmake/ydlidar_ros2_driverConfig.cmake
+[7.977s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/cmake/ydlidar_ros2_driverConfig-version.cmake
+[7.977s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ydlidar_ros2_driver/share/ydlidar_ros2_driver/package.xml
+[7.979s] Invoked command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ydlidar_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/ydlidar_ros2_driver

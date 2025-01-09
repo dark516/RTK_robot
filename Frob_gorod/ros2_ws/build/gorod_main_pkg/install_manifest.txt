@@ -1,0 +1,16 @@
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/launch/launch/bringup.launch.py
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/ament_index/resource_index/package_run_dependencies/gorod_main_pkg
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/ament_index/resource_index/parent_prefix_path/gorod_main_pkg
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/environment/ament_prefix_path.sh
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/environment/ament_prefix_path.dsv
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/environment/path.sh
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/environment/path.dsv
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/local_setup.bash
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/local_setup.sh
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/local_setup.zsh
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/local_setup.dsv
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/package.dsv
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/ament_index/resource_index/packages/gorod_main_pkg
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/cmake/gorod_main_pkgConfig.cmake
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/cmake/gorod_main_pkgConfig-version.cmake
+/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/gorod_main_pkg/share/gorod_main_pkg/package.xml

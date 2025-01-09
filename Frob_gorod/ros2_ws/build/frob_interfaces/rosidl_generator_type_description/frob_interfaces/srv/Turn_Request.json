@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "frob_interfaces/srv/Turn_Request",
+      "fields": [
+        {
+          "name": "angle",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "speed",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "frob_interfaces/srv/Turn_Request",
+      "hash_string": "RIHS01_8367aadb1ac3a839b1ae835dffe5fc1fd176b786c2e78cec1767f694c6abc92d"
+    }
+  ]
+}

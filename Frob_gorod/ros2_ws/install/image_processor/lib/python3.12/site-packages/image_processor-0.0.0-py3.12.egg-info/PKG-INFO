@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: image_processor
+Version: 0.0.0
+Summary: image processor
+Maintainer: Kulagin Alex
+Maintainer-email: sashakulagin2007@gmail.com
+License: Apache License 2.0
+Requires-Dist: setuptools

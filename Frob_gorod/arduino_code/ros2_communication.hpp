@@ -1,7 +1,7 @@
 #pragma once
 #include "motor_regulator.h"
 
-int state = 3;
+int state = 1;
 
 int counts[3] = {0, 0, 0};
 

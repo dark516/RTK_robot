@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from frob_interfaces/srv/Turn.srv
+// generated code does not contain a copyright notice
+
+
+module frob_interfaces {
+  module srv {
+    struct Turn_Request {
+      int32 angle;
+
+      int32 speed;
+    };
+    struct Turn_Response {
+      boolean success;
+    };
+  };
+};

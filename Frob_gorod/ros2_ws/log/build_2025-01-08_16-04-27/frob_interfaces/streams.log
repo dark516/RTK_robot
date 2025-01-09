@@ -1,0 +1,265 @@
+[0.033s] Invoking command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/frob_interfaces -DCMAKE_INSTALL_PREFIX=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces
+[0.468s] -- The C compiler identification is GNU 13.3.0
+[0.468s] -- The CXX compiler identification is GNU 13.3.0
+[0.469s] -- Detecting C compiler ABI info
+[0.469s] -- Detecting C compiler ABI info - done
+[0.469s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.469s] -- Detecting C compile features
+[0.469s] -- Detecting C compile features - done
+[0.469s] -- Detecting CXX compiler ABI info
+[0.486s] -- Detecting CXX compiler ABI info - done
+[0.491s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.491s] -- Detecting CXX compile features
+[0.492s] -- Detecting CXX compile features - done
+[0.496s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.655s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.778s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.785s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.848s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.891s] -- Found rosidl_adapter: 4.6.4 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.478s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.948s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.530s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.539s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.673s] -- Found PythonExtra: /usr/bin/python3  
+[3.101s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[3.148s] -- Configuring done (3.1s)
+[3.180s] -- Generating done (0.0s)
+[3.182s] -- Build files have been written to: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces
+[3.189s] Invoked command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/src/frob_interfaces -DCMAKE_INSTALL_PREFIX=/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces
+[3.190s] Invoking command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces -- -j16 -l16
+[3.245s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[3.253s] [  2%] Built target ament_cmake_python_copy_frob_interfaces
+[3.385s] [  2%] Built target frob_interfaces__rosidl_generator_type_description
+[3.395s] [  4%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.405s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.420s] running egg_info
+[3.421s] creating frob_interfaces.egg-info
+[3.435s] writing frob_interfaces.egg-info/PKG-INFO
+[3.435s] writing dependency_links to frob_interfaces.egg-info/dependency_links.txt
+[3.435s] writing top-level names to frob_interfaces.egg-info/top_level.txt
+[3.435s] writing manifest file 'frob_interfaces.egg-info/SOURCES.txt'
+[3.476s] reading manifest file 'frob_interfaces.egg-info/SOURCES.txt'
+[3.476s] writing manifest file 'frob_interfaces.egg-info/SOURCES.txt'
+[3.503s] [  6%] Built target ament_cmake_python_build_frob_interfaces_egg
+[3.630s] [  6%] Built target frob_interfaces__cpp
+[3.657s] [ 18%] [32mBuilding C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/srv/detail/forward__type_support.c.o[0m
+[3.658s] [ 20%] [32mBuilding C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/srv/detail/turn__description.c.o[0m
+[3.658s] [ 20%] [32mBuilding C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/srv/detail/turn__functions.c.o[0m
+[3.658s] [ 20%] [32mBuilding C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/srv/detail/forward__description.c.o[0m
+[3.658s] [ 20%] [32mBuilding C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/srv/detail/turn__type_support.c.o[0m
+[3.658s] [ 20%] [32mBuilding C object CMakeFiles/frob_interfaces__rosidl_generator_c.dir/rosidl_generator_c/frob_interfaces/srv/detail/forward__functions.c.o[0m
+[3.707s] [ 22%] [32m[1mLinking C shared library libfrob_interfaces__rosidl_generator_c.so[0m
+[3.746s] [ 22%] Built target frob_interfaces__rosidl_generator_c
+[3.756s] [ 34%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.756s] [ 34%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.756s] [ 34%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.756s] [ 34%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.756s] [ 34%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[3.757s] [ 36%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.954s] [ 38%] [32mBuilding CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/frob_interfaces/srv/turn__type_support.cpp.o[0m
+[3.954s] [ 40%] [32mBuilding CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/frob_interfaces/srv/turn__type_support.cpp.o[0m
+[3.954s] [ 43%] [32mBuilding CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/frob_interfaces/srv/forward__type_support.cpp.o[0m
+[3.955s] [ 45%] [32mBuilding CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/frob_interfaces/srv/forward__type_support.cpp.o[0m
+[3.974s] [ 47%] [32mBuilding CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/frob_interfaces/srv/detail/forward__type_support.cpp.o[0m
+[3.974s] [ 50%] [32mBuilding CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/frob_interfaces/srv/detail/turn__type_support.cpp.o[0m
+[3.998s] [ 56%] [32m[1mLinking CXX shared library libfrob_interfaces__rosidl_typesupport_c.so[0m
+[3.998s] [ 56%] [32mBuilding C object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/frob_interfaces/srv/detail/forward__type_support.c.o[0m
+[3.998s] [ 56%] [32mBuilding C object CMakeFiles/frob_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/frob_interfaces/srv/detail/turn__type_support.c.o[0m
+[4.035s] [ 59%] [32mBuilding CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/frob_interfaces/srv/detail/dds_fastrtps/turn__type_support.cpp.o[0m
+[4.038s] [ 61%] [32mBuilding CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/frob_interfaces/srv/detail/dds_fastrtps/forward__type_support.cpp.o[0m
+[4.047s] [ 65%] [32mBuilding CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/frob_interfaces/srv/detail/forward__type_support_c.cpp.o[0m
+[4.047s] [ 65%] [32mBuilding CXX object CMakeFiles/frob_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/frob_interfaces/srv/detail/turn__type_support_c.cpp.o[0m
+[4.048s] [ 68%] [32m[1mLinking C shared library libfrob_interfaces__rosidl_typesupport_introspection_c.so[0m
+[4.051s] [ 68%] Built target frob_interfaces__rosidl_typesupport_c
+[4.087s] [ 68%] Built target frob_interfaces__rosidl_typesupport_introspection_c
+[4.250s] [ 70%] [32m[1mLinking CXX shared library libfrob_interfaces__rosidl_typesupport_cpp.so[0m
+[4.320s] [ 70%] Built target frob_interfaces__rosidl_typesupport_cpp
+[4.374s] [ 72%] [32m[1mLinking CXX shared library libfrob_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[4.443s] [ 72%] Built target frob_interfaces__rosidl_typesupport_introspection_cpp
+[4.468s] [ 75%] [32m[1mLinking CXX shared library libfrob_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[4.513s] [ 75%] Built target frob_interfaces__rosidl_typesupport_fastrtps_c
+[4.527s] [ 77%] [32m[1mLinking CXX shared library libfrob_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.588s] [ 77%] Built target frob_interfaces__rosidl_typesupport_fastrtps_cpp
+[4.609s] [ 77%] Built target frob_interfaces
+[4.632s] [ 79%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.941s] [ 79%] Built target frob_interfaces__py
+[4.964s] [ 84%] [32mBuilding C object CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/srv/_forward_s.c.o[0m
+[4.964s] [ 84%] [32mBuilding C object CMakeFiles/frob_interfaces__rosidl_generator_py.dir/rosidl_generator_py/frob_interfaces/srv/_turn_s.c.o[0m
+[5.062s] [ 86%] [32m[1mLinking C shared library libfrob_interfaces__rosidl_generator_py.so[0m
+[5.100s] [ 86%] Built target frob_interfaces__rosidl_generator_py
+[5.122s] [ 93%] [32mBuilding C object CMakeFiles/frob_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.122s] [ 93%] [32mBuilding C object CMakeFiles/frob_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[5.122s] [ 93%] [32mBuilding C object CMakeFiles/frob_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[5.199s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/frob_interfaces/frob_interfaces_s__rosidl_typesupport_c.so[0m
+[5.200s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/frob_interfaces/frob_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[5.203s] [100%] [32m[1mLinking C shared module rosidl_generator_py/frob_interfaces/frob_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[5.231s] [100%] Built target frob_interfaces_s__rosidl_typesupport_introspection_c
+[5.231s] [100%] Built target frob_interfaces_s__rosidl_typesupport_fastrtps_c
+[5.231s] [100%] Built target frob_interfaces_s__rosidl_typesupport_c
+[5.242s] Invoked command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces -- -j16 -l16
+[5.383s] Invoking command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces
+[5.391s] -- Install configuration: ""
+[5.392s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/ament_index/resource_index/rosidl_interfaces/frob_interfaces
+[5.392s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/srv/Turn.json
+[5.392s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/srv/Forward.json
+[5.392s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces
+[5.392s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv
+[5.392s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/forward.h
+[5.392s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/turn.h
+[5.392s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail
+[5.392s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__type_support.h
+[5.392s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__functions.h
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__functions.h
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__type_support.c
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.h
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.c
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__functions.c
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__struct.h
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__description.c
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__description.c
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__struct.h
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__functions.c
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_generator_c__visibility_control.h
+[5.393s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/library_path.sh
+[5.394s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/library_path.dsv
+[5.394s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_generator_c.so
+[5.394s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_generator_c.so" to ""
+[5.394s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces
+[5.394s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv
+[5.394s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail
+[5.394s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_fastrtps_c.h
+[5.394s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_fastrtps_c.h
+[5.394s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg
+[5.395s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.395s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_fastrtps_c.so
+[5.395s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[5.395s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces
+[5.395s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv
+[5.395s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail
+[5.395s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__type_support.c
+[5.395s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.c
+[5.395s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_introspection_c.h
+[5.395s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_introspection_c.h
+[5.395s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg
+[5.395s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.395s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_introspection_c.so
+[5.395s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[5.396s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_c.so
+[5.396s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_c.so" to ""
+[5.396s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces
+[5.396s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv
+[5.396s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/turn.hpp
+[5.396s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/forward.hpp
+[5.396s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail
+[5.396s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__builder.hpp
+[5.396s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__builder.hpp
+[5.396s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__traits.hpp
+[5.396s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__struct.hpp
+[5.397s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__traits.hpp
+[5.397s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__struct.hpp
+[5.397s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__type_support.hpp
+[5.397s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.hpp
+[5.397s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg
+[5.397s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[5.397s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces
+[5.397s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv
+[5.397s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail
+[5.397s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_fastrtps_cpp.hpp
+[5.397s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/dds_fastrtps
+[5.397s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_fastrtps_cpp.hpp
+[5.397s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg
+[5.397s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.397s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[5.398s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.398s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces
+[5.398s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv
+[5.398s] -- Up-to-date: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail
+[5.398s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__rosidl_typesupport_introspection_cpp.hpp
+[5.398s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__rosidl_typesupport_introspection_cpp.hpp
+[5.399s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/turn__type_support.cpp
+[5.400s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/include/frob_interfaces/frob_interfaces/srv/detail/forward__type_support.cpp
+[5.400s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_introspection_cpp.so
+[5.400s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[5.400s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_cpp.so
+[5.400s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_typesupport_cpp.so" to ""
+[5.400s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/pythonpath.sh
+[5.400s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/pythonpath.dsv
+[5.400s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info
+[5.401s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[5.401s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[5.401s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[5.401s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[5.401s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces
+[5.401s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/__init__.py
+[5.401s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv
+[5.401s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_forward.py
+[5.401s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_turn_s.c
+[5.401s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/__init__.py
+[5.401s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_forward_s.c
+[5.402s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_turn.py
+[5.402s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.402s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_c.so
+[5.402s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_c.c
+[5.402s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_introspection_c.so
+[5.402s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/_frob_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[5.402s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[5.437s] Listing '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces'...
+[5.437s] Compiling '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/__init__.py'...
+[5.437s] Listing '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv'...
+[5.437s] Compiling '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/__init__.py'...
+[5.437s] Compiling '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_forward.py'...
+[5.437s] Compiling '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/srv/_turn.py'...
+[5.443s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[5.443s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""
+[5.443s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_introspection_c.so
+[5.444s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_introspection_c.so" to ""
+[5.444s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_c.so
+[5.444s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/python3.12/site-packages/frob_interfaces/frob_interfaces_s__rosidl_typesupport_c.so" to ""
+[5.444s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_generator_py.so
+[5.444s] -- Set non-toolchain portion of runtime path of "/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/lib/libfrob_interfaces__rosidl_generator_py.so" to ""
+[5.444s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/srv/Turn.idl
+[5.445s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/srv/Forward.idl
+[5.445s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/srv/Turn.srv
+[5.445s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/srv/Forward.srv
+[5.445s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/ament_index/resource_index/package_run_dependencies/frob_interfaces
+[5.445s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/ament_index/resource_index/parent_prefix_path/frob_interfaces
+[5.445s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/ament_prefix_path.sh
+[5.445s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/ament_prefix_path.dsv
+[5.445s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/path.sh
+[5.446s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/environment/path.dsv
+[5.446s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/local_setup.bash
+[5.446s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/local_setup.sh
+[5.446s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/local_setup.zsh
+[5.446s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/local_setup.dsv
+[5.446s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.dsv
+[5.446s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/ament_index/resource_index/packages/frob_interfaces
+[5.446s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_cExport.cmake
+[5.446s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_cExport-noconfig.cmake
+[5.447s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[5.447s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.447s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[5.447s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.447s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_cExport.cmake
+[5.447s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[5.447s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_cppExport.cmake
+[5.447s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.447s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.448s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[5.448s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.448s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_cppExport.cmake
+[5.448s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[5.448s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_pyExport.cmake
+[5.448s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/export_frob_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[5.448s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/rosidl_cmake-extras.cmake
+[5.448s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.448s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.449s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[5.449s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[5.449s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.449s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.449s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfacesConfig.cmake
+[5.449s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/cmake/frob_interfacesConfig-version.cmake
+[5.449s] -- Installing: /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/frob_interfaces/share/frob_interfaces/package.xml
+[5.451s] Invoked command in '/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_image_saver:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/ros2_arduino_bridge:/home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/install/image_processor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dark516/Documents/RTK_robot/Frob_gorod/ros2_ws/build/frob_interfaces
