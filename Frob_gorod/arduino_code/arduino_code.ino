@@ -2,9 +2,9 @@
 #include "ros2_communication.hpp"
 #include "sensors.hpp"
 
-#define BASE_SPEED 100
+#define BASE_SPEED 130
 
-int gray = 560;
+int gray = 620;
 //ЛЕВЫЙ МОТОР
 void __left_motor_enc(); //Заголовок функции
 //Создание экземпляра левого регулятора
@@ -110,21 +110,20 @@ void loop() {
     left_regulator.update(); //Не трогать.
     right_regulator.update(); //Не трогать.
   }
-  Serial.print(left_regulator.encoder.ticks);
-  Serial.print("      ");
-  Serial.print(right_regulator.encoder.ticks);
-  Serial.println();
-  
-//  if (state == 1) { //Если робот выключен
-//    left_regulator.motor.set_pwmdir(0);
-//    right_regulator.motor.set_pwmdir(0);
-//    return;
-//  }
-//  line_tick();
-//  if (rline.read() < gray) {
-//    stop();
-//    delay(50);
-//    goTick(500);
+//  Serial.print(lline.read());
+//  Serial.print("   ");
+//  Serial.println(rline.read());
+  if (state == 1) { //Если робот выключен
+    left_regulator.motor.set_pwmdir(0);
+    right_regulator.motor.set_pwmdir(0);
+    return;
+  }
+  line_tick();
+  if (rline.read() < gray) {
+    stop();
+    delay(50);
+    goTick(500);
+    stop();
 //    switch (findMostFrequentNumber()) {
 //    case 0:  break; // Прямо
 //    case 1:      // Блокирующий поврот налево  
@@ -149,5 +148,5 @@ void loop() {
 //      break;
 //    }
 //    resetCounts();
-//  }
+  }
 }

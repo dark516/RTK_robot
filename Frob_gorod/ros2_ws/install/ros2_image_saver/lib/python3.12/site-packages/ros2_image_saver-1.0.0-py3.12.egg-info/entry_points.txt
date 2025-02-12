@@ -1,2 +1,0 @@
-[console_scripts]
-image_saver = ros2_image_saver.image_saver:main
