@@ -1,0 +1,74 @@
+ekf_filter_node:
+  ros__parameters:
+    frequency: 45.0
+    two_d_mode: true
+    publish_tf: true
+    sensor_timeout: 0.1
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_footprint
+    world_frame: odom
+
+    odom0: /odom
+    odom0_config: [true, true, false,  # X, Y, Z
+               false, false, true, # Roll, Pitch, Yaw
+               true, true, false,  # Vx, Vy, Vz
+               false, false, true, # Vroll, Vpitch, Vyaw
+               false, false, false] # Ax, Ay, Az
+    imu0: /imu/mpu6050
+    imu0_config: [false, false, false,  # X, Y, Z
+              true, true, true,    # Roll, Pitch, Yaw
+              false, false, false, # Vx, Vy, Vz
+              true, true, true,    # Vroll, Vpitch, Vyaw
+              false, false, false] # Ax, Ay, Az
+
+    odom0_pose_rejection_threshold: 10.0
+    odom0_twist_rejection_threshold: 5.0
+    imu0_pose_rejection_threshold: 10.0
+    imu0_twist_rejection_threshold: 5.0
+
+    odom0_pose_noise:
+      x: 0.05
+      y: 0.05
+      z: 0.05
+      roll: 0.05
+      pitch: 0.05
+      yaw: 0.05
+
+    odom0_twist_noise:
+      x: 0.05
+      y: 0.05
+      z: 0.05
+      roll: 0.05
+      pitch: 0.05
+      yaw: 0.05
+
+    imu0_pose_noise:
+      roll: 0.01
+      pitch: 0.01
+      yaw: 0.01
+
+    imu0_twist_noise:
+      x: 0.01
+      y: 0.01
+      z: 0.01
+
+    velocity_limits:
+      linear:
+        x: 0.486
+        y: 0.0
+        z: 0.0
+      angular:
+        x: 0.0
+        y: 0.0
+        z: 5.4
+
+    acceleration_limits:
+      linear:
+        x: 0.5
+        y: 0.0
+        z: 0.0
+      angular:
+        x: 0.0
+        y: 0.0
+        z: 5.4
