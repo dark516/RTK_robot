@@ -64,8 +64,6 @@ https://github.com/dark516/Frob_robot
 
 ## Связь с Frob_robot
 
-<img width="491" height="508" alt="433066577-4e6b15c5-6662-47f5-8419-bada88828910" src="https://github.com/user-attachments/assets/d74b77da-9948-43f1-9651-eeba81af701d" />
-
 Основная платформа Frob находится в отдельном репозитории:
 
 ```text
