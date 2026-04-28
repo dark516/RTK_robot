@@ -724,13 +724,6 @@ export ROS_DOMAIN_ID=78
 
 Базовый проект **Frob_robot** распространяется под лицензией Apache-2.0.
 
-Для данного прикладного репозитория `RTK_robot` отдельный файл лицензии может быть добавлен дополнительно. Если проект планируется публиковать как open-source, рекомендуется добавить `LICENSE` в корень репозитория и явно указать условия распространения кода.
-
-```
-
-Стоит ещё добавить в корень репозитория `LICENSE`, потому что сейчас README ссылается на лицензию базового `Frob_robot`, но у прикладного `RTK_robot` отдельная лицензия явно не указана.
-::contentReference[oaicite:4]{index=4}
-```
 
 [1]: https://github.com/dark516/RTK_robot "GitHub - dark516/RTK_robot: ROS packages for the RTK Cup 2024"
 [2]: https://raw.githubusercontent.com/dark516/Frob_robot/main/README.md "raw.githubusercontent.com"
