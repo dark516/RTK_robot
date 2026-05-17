@@ -2,9 +2,7 @@
 """ROS2 node that subscribes to /dist and serves a web UI via Flask."""
 
 import threading
-
 from flask import Flask, render_template_string, request, jsonify
-
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32
@@ -238,16 +236,8 @@ select {
 }
 
 /*
-   24 rods total.
-
-   Rod pattern:
-   - Rod 1 is gray
-   - Rod 24 is gray
-   - Rod 12 and rod 13 are both red
-
-   Selectable gaps:
-   - Gap 8  = between rod 8 and rod 9
-   - Gap 15 = between rod 15 and rod 16
+   Each rectangle has 12 pairs:
+   gray rod + selectable gap + dark red rod
 */
 
 .rod {
@@ -267,28 +257,23 @@ select {
 }
 
 .gap {
-    width: 4px;
+    width: 10px;
     height: 84px;
     border-radius: 5px;
-    background: transparent;
-    cursor: default;
-}
-
-.gap.selectable {
-    width: 12px;
     cursor: pointer;
+    background: transparent;
 }
 
 /* selected gaps are visible ONLY in admin mode */
-.admin-mode .gap.selectable.selected {
+.admin-mode .gap.selected {
     background: var(--admin-selected);
 }
 
-.admin-mode .gap.selectable:hover {
+.admin-mode .gap:hover {
     background: var(--admin-hover);
 }
 
-.admin-mode .gap.selectable.selected:hover {
+.admin-mode .gap.selected:hover {
     background: var(--admin-selected);
 }
 
@@ -405,8 +390,6 @@ let currentRobotCm = 0;
 let currentTheme = "terracotta";
 let sliderDragging = false;
 
-const SELECTABLE_GAPS = new Set([8, 15]);
-
 const root = document.body;
 const leftColumn = document.getElementById("leftColumn");
 const rightColumn = document.getElementById("rightColumn");
@@ -493,32 +476,6 @@ themeSelect.addEventListener("change", async () => {
     });
 });
 
-/* ================= RODS ================= */
-
-function getRodColor(rodNumber) {
-    /*
-       Rod colors:
-       1  gray
-       2  red
-       3  gray
-       ...
-       11 gray
-       12 red
-       13 red
-       14 gray
-       15 red
-       ...
-       23 red
-       24 gray
-    */
-
-    if (rodNumber <= 12) {
-        return rodNumber % 2 === 1 ? "gray" : "red";
-    }
-
-    return rodNumber % 2 === 1 ? "red" : "gray";
-}
-
 /* ================= RECTANGLES ================= */
 
 function createRect(id, side) {
@@ -543,47 +500,39 @@ function createRect(id, side) {
     const row = document.createElement("div");
     row.className = "rod-row";
 
-    // 24 rods total, with gaps between rods
-    for (let rodNumber = 1; rodNumber <= 24; rodNumber++) {
-        const rod = document.createElement("div");
-        rod.className = "rod " + getRodColor(rodNumber);
-        rod.dataset.rod = rodNumber;
-        row.appendChild(rod);
+    // 12 pairs: gray rod + selectable gap + dark red rod
+    for (let i = 0; i < 12; i++) {
+        const grayRod = document.createElement("div");
+        grayRod.className = "rod gray";
 
-        // Gap number equals the rod number before the gap.
-        // Gap 8 is between rod 8 and 9.
-        // Gap 15 is between rod 15 and 16.
-        if (rodNumber < 24) {
-            const gapNumber = rodNumber;
+        const gap = document.createElement("div");
+        gap.className = "gap";
+        gap.dataset.rect = id;
+        gap.dataset.index = i;
 
-            const gap = document.createElement("div");
-            gap.className = "gap";
-            gap.dataset.rect = id;
-            gap.dataset.index = gapNumber;
+        gap.onclick = async () => {
+            if (!adminMode) return;
 
-            if (SELECTABLE_GAPS.has(gapNumber)) {
-                gap.classList.add("selectable");
+            await fetch("/toggle_gap", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    rect: id,
+                    gap: i
+                })
+            });
 
-                gap.onclick = async () => {
-                    if (!adminMode) return;
+            await updateFromServer();
+        };
 
-                    await fetch("/toggle_gap", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({
-                            rect: id,
-                            gap: gapNumber
-                        })
-                    });
+        const redRod = document.createElement("div");
+        redRod.className = "rod red";
 
-                    await updateFromServer();
-                };
-            }
-
-            row.appendChild(gap);
-        }
+        row.appendChild(grayRod);
+        row.appendChild(gap);
+        row.appendChild(redRod);
     }
 
     rect.appendChild(row);
@@ -839,18 +788,8 @@ def state():
 @app.route("/toggle_gap", methods=["POST"])
 def toggle_gap():
     data = request.json
-
     rect = int(data["rect"])
     gap = int(data["gap"])
-
-    # Server-side protection:
-    # only gap 8 and gap 15 can be selected.
-    if gap not in [8, 15]:
-        return jsonify({
-            "success": False,
-            "error": "Only gaps 8 and 15 are selectable"
-        }), 400
-
     key = f"{rect}_{gap}"
 
     with state_lock:
@@ -880,7 +819,6 @@ def set_title():
     global title_text
 
     data = request.json
-
     with state_lock:
         title_text = str(data.get("title", "ROBOT SYSTEM"))
 
@@ -922,20 +860,14 @@ class WebUINode(Node):
         )
 
     def _dist_callback(self, msg):
-        """Update robot position from /dist topic value in cm."""
-        global robot_position
-
+        """Update robot position from /dist topic value (in cm)."""
         with state_lock:
+            global robot_position
             cm = int(round(float(msg.data)))
             robot_position = max(0, min(160, cm))
 
     def _run_flask(self):
-        app.run(
-            host=self._host,
-            port=self._port,
-            debug=False,
-            use_reloader=False
-        )
+        app.run(host=self._host, port=self._port, debug=False, use_reloader=False)
 
 
 def main(args=None):

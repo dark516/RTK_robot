@@ -7,7 +7,7 @@ import math
 
 
 class QRNavigator(Node):
-    """State-machine: drives forward using odometry + QR centering, reverses, stops."""
+    """State-machine: drives forward using odometry + QR centering, then stops."""
 
     def __init__(self):
         super().__init__('qr_navigator')
@@ -19,9 +19,6 @@ class QRNavigator(Node):
         self.declare_parameter('kp_fwd', -1.0)
         self.declare_parameter('ki_fwd', 0.00)
         self.declare_parameter('kd_fwd', 0.0)
-        self.declare_parameter('kp_bwd', -1.0)
-        self.declare_parameter('ki_bwd', -0.0)
-        self.declare_parameter('kd_bwd', -0.0)
         self.declare_parameter('control_frequency', 20.0)
         self.declare_parameter('odom_topic', '/odom')
         self.declare_parameter('verbose', False)
@@ -36,9 +33,6 @@ class QRNavigator(Node):
         self._kp_fwd = float(self.get_parameter('kp_fwd').value)
         self._ki_fwd = float(self.get_parameter('ki_fwd').value)
         self._kd_fwd = float(self.get_parameter('kd_fwd').value)
-        self._kp_bwd = float(self.get_parameter('kp_bwd').value)
-        self._ki_bwd = float(self.get_parameter('ki_bwd').value)
-        self._kd_bwd = float(self.get_parameter('kd_bwd').value)
 
         self._state = 'FORWARD'
         self._state_since = self.get_clock().now()
@@ -49,8 +43,6 @@ class QRNavigator(Node):
         self._error = 0.0
         self._odom_pos = (0.0, 0.0)
         self._forward_start = None
-        self._backward_start = None
-        self._max_dist = 0.0
         self._dist = 0.0
 
         self._cmd_pub = self.create_publisher(Twist, '/cmd_vel', 10)
@@ -124,7 +116,6 @@ class QRNavigator(Node):
         if state == 'FORWARD':
             if self._forward_start is None:
                 self._forward_start = self._odom_pos
-                self._max_dist = 0.0
 
             self._dist = self._dist_between(self._odom_pos, self._forward_start)
 
@@ -133,7 +124,6 @@ class QRNavigator(Node):
                 cmd.angular.z = 0.0
                 self._cmd_pub.publish(cmd)
                 self._dist_pub.publish(Float32(data=self._dist * 100.0))
-                self._max_dist = self._dist
                 self._set_state('WAIT_FWD')
                 self.get_logger().info(f'Forward done - {self._dist*100:.1f}cm')
                 return
@@ -150,40 +140,6 @@ class QRNavigator(Node):
                 self._log(f'FWD | dist={self._dist*100:.1f}cm error={self._error:+.3f} ang={angular:+.3f}')
 
         elif state == 'WAIT_FWD':
-            cmd.linear.x = 0.0
-            cmd.angular.z = 0.0
-            if self._elapsed() >= self._wait_dur:
-                self._forward_start = None
-                self._backward_start = self._odom_pos
-                self._set_state('BACKWARD')
-
-        elif state == 'BACKWARD':
-            if self._backward_start is None:
-                self._backward_start = self._odom_pos
-            back_dist = self._dist_between(self._odom_pos, self._backward_start)
-            self._dist = max(0.0, self._max_dist - back_dist)
-
-            if back_dist >= self._target_dist:
-                cmd.linear.x = 0.0
-                cmd.angular.z = 0.0
-                self._cmd_pub.publish(cmd)
-                self._dist_pub.publish(Float32(data=self._dist * 100.0))
-                self._set_state('WAIT_BWD')
-                self.get_logger().info(f'Backward done - {back_dist*100:.1f}cm')
-                return
-
-            if not self._detected:
-                cmd.linear.x = -self._base_speed
-                cmd.angular.z = 0.0
-            else:
-                angular = self._compute_angular(
-                    self._error, dt, self._kp_bwd, self._ki_bwd, self._kd_bwd
-                )
-                cmd.linear.x = -self._base_speed
-                cmd.angular.z = angular
-                self._log(f'BWD | dist={self._dist*100:.1f}cm error={self._error:+.3f} ang={angular:+.3f}')
-
-        elif state == 'WAIT_BWD':
             cmd.linear.x = 0.0
             cmd.angular.z = 0.0
             if self._elapsed() >= self._wait_dur:
