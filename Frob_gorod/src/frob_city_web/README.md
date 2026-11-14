@@ -9,14 +9,15 @@
 
 Управление намеренно ограничено пятью командами: `START`, `PAUSE`,
 `RESUME`, `ABORT`, `RESET`. HTTP API не управляет приводом и не публикует
-скорость: команды передаются только через сервис `/city/control`.
+скорость: команды передаются только через сервис `/city/control_mission`.
 
 ## Сборка и запуск
 
 ```bash
-cd /home/pi/Frob_gorod
+cd RTK_robot/Frob_gorod
 source /opt/ros/jazzy/setup.zsh
-colcon build --packages-select frob_city_web
+source .venv/bin/activate
+python /usr/bin/colcon build --base-paths src --symlink-install --packages-up-to frob_city_web
 source install/setup.zsh
 ROS_DOMAIN_ID=8 ros2 launch frob_city_web frob_city_web.launch.py
 ```
@@ -24,8 +25,9 @@ ROS_DOMAIN_ID=8 ros2 launch frob_city_web frob_city_web.launch.py
 Единый безопасный запуск ядра автономности и веб-панели:
 
 ```bash
-cd /home/pi/Frob_gorod
+cd RTK_robot/Frob_gorod
 source /opt/ros/jazzy/setup.zsh
+source .venv/bin/activate
 source install/setup.zsh
 ros2 launch frob_city_web city_robot_test.launch.py
 ```
@@ -45,7 +47,7 @@ ros2 launch frob_city_web city_robot_test.launch.py
 Страница `http://<robot-ip>:8080/settings/calibration` совмещает фиксированный
 пресет полигона 5×5 с Nav2-картой. При наличии свежего `/map` он выбирается
 автоматически. Если `/map` отсутствует, интерфейс предлагает YAML-карты из
-`/home/pi/Frob_gorod/src/frob_navigation/maps` и установленной копии пакета.
+`~/Frob_gorod/src/frob_navigation/maps` и установленной копии пакета.
 
 Калибратор создаёт только версионные черновики. Проверка геометрии отдельно
 показывает физические параметры, которых ещё не хватает. Активация возможна
@@ -55,11 +57,11 @@ ros2 launch frob_city_web city_robot_test.launch.py
 Активные файлы находятся в:
 
 ```text
-/home/pi/Frob_gorod/calibration/active/calibration.json
-/home/pi/Frob_gorod/calibration/active/field.yaml
+~/Frob_gorod/calibration/active/calibration.json
+~/Frob_gorod/calibration/active/field.yaml
 ```
 
-Подробная последовательность приведена в `docs/FIELD_CALIBRATION_GUIDE.md`.
+Установка зависимостей и соревновательный запуск описаны в [README Frob City](../../README.md#установка).
 
 ## Проверка
 

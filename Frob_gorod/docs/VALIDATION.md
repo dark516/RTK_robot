@@ -8,6 +8,7 @@
 |---|---|
 | Выборочная сборка `--packages-up-to frob_city_web` | 14 пакетов собрано |
 | Городская навигация, веб-панель, детектор и watchdog Arduino | **426 passed**, 0 failed, 5,76 с |
+| Дополнительная проверка манифеста ROS-интерфейсов | **5 passed**, отдельно от основного набора |
 | Аргументы `city_competition_robot.launch.py` | Загружаются, ресурсы пакетов найдены |
 | Аргументы `city_competition_offboard.launch.py` | Загружаются без старого каталога vendor |
 | Веб-узел с реальными ROS-интерфейсами | Запущен на loopback, HTTP 200, HTML 10 145 байт |
@@ -20,6 +21,12 @@
 
 ```bash
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q
+```
+
+Манифест интерфейсов проверяется отдельно:
+
+```bash
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q src/frob_city_interfaces/test/test_interface_manifest.py
 ```
 
 Настройка `pytest.ini` выбирает тесты городского стека и отдельную регрессию остановки Arduino. Шаблонные copyright/flake8/pep257-проверки старых базовых пакетов не входят в этот результат. Начальные попытки проверки до сборки ROS-интерфейсов и из неверного рабочего каталога не учитываются как верификация релиза.
