@@ -1,0 +1,20 @@
+vision:
+  enabled: false
+  model_name: ssd_mobilenet_v1_coco_2017_11_17
+  models_directory: package://rover_vision/models
+  input_topic: /image_raw
+  processed_image_topic: /image_processed
+  processed_compressed_image_topic: /image_processed/compressed
+  frame_id: camera_optical_frame
+  publish_raw: true
+  publish_compressed: true
+  publish_detections: true
+  detections_topic: /detections
+  confidence_threshold: 0.30
+  nms_threshold: 0.45
+  max_processing_fps: 10.0
+  annotate_labels: true
+  annotate_confidence: true
+  line_thickness: 2
+  jpeg_quality: 85
+

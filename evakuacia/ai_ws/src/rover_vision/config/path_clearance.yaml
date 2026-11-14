@@ -1,0 +1,22 @@
+path_clearance_node:
+  ros__parameters:
+    camera_url: http://127.0.0.1:8091/frame?mode=live
+    camera_timeout_sec: 0.75
+    grid_pose_topic: /rover/grid_pose
+    pose_timeout_sec: 5.0
+    state_topic: /road/state
+    result_topic: /path_clearance
+    debug_topic: /path_clearance/debug/compressed
+    model_path: ~/.config/sverk-rover/path_clearance_cell_model.npz
+    library_path: ~/.config/sverk-rover/path_clearance
+    # Four normalized image points: top-left, top-right, bottom-right, bottom-left.
+    roi_points: [0.40, 0.68, 0.60, 0.68, 0.64, 0.90, 0.36, 0.90]
+    max_processing_fps: 5.0
+    publish_debug_image: true
+    stream_enabled: true
+    stream_host: 0.0.0.0
+    stream_port: 8080
+    blocked_fraction_threshold: 0.10
+    component_fraction_threshold: 0.025
+    width_fraction_threshold: 0.55
+    use_edge_anomalies: false

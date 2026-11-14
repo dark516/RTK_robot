@@ -1,0 +1,7 @@
+# Optional stable name for the Waveshare ESP32-S3-AUDIO-Board USB serial device.
+# Adjust idVendor/idProduct after checking:
+#   udevadm info -a -n /dev/ttyACM0 | grep -m1 -E 'idVendor|idProduct'
+#
+# Espressif USB Serial/JTAG often uses 303a:1001.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="303a", ATTRS{idProduct}=="1001", SYMLINK+="waveshare_audio", GROUP="dialout", MODE="0660"
+

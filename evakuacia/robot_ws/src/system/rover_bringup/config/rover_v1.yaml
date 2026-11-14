@@ -1,0 +1,82 @@
+robot:
+  id: rover-01
+  hostname: rover-01
+  company: Сверх
+  model: mecanum-rover-v1
+  serial_number: SVR-0001
+  software_version: 0.3.0
+  web_interface_version: 0.1.0
+
+geometry:
+  wheel_radius_m: 0.03
+  wheel_width_m: 0.037
+  wheelbase_m: 0.13961
+  track_width_m: 0.181
+  chassis_length_m: 0.2006
+  chassis_width_m: 0.199
+  chassis_height_m: 0.0532
+  chassis_xyz:
+  - 0.0125
+  - 0.0
+  - 0.0096
+  imu_xyz:
+  - 0.0332
+  - -0.0837
+  - 0.0435
+  imu_rpy:
+  - 0.0
+  - 0.0
+  - 1.57079632679
+  lidar_xyz:
+  - 0.0662
+  - 0.0
+  - 0.0837
+  lidar_rpy:
+  - 0.0
+  - 0.0
+  - 3.141592653589793
+
+encoders:
+  encoder_lines: 11.0
+  reduction_ratio: 45.0
+  quadrature_factor: 4.0
+
+base_driver:
+  # Compensates the corrected mecanum wheel layout where X/Y were swapped.
+  motor_command_order:
+  - 3
+  - 1
+  - 2
+  - 0
+  motor_command_signs:
+  - -1
+  - -1
+  - -1
+  - -1
+  # Inverse of motor_command_order so encoder feedback stays in wheel order:
+  # [front_left, front_right, rear_left, rear_right].
+  encoder_feedback_order:
+  - 3
+  - 1
+  - 2
+  - 0
+  encoder_feedback_signs:
+  - -1
+  - -1
+  - -1
+  - -1
+
+wheel_odometry:
+  x_multiplier: 1.0
+  y_multiplier: 1.0
+  yaw_multiplier: 1.0
+
+imu:
+  axis_map:
+  - 0
+  - 1
+  - 2
+  axis_signs:
+  - 1
+  - 1
+  - 1

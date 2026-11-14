@@ -1,0 +1,25 @@
+profile:
+  name: agent
+  description: Local LLM/MCP agent and MQTT fleet bridge only.
+
+components:
+  base: false
+  odometry: false
+  description: false
+  localization: false
+  twist_mux: false
+  imu: false
+  lidar: false
+  led_strip: false
+  web: false
+  display: false
+  rosboard: false
+  octoliner: false
+  waveshare_audio: false
+  camera: false
+  vision: false
+
+  agent: true
+  fleet_bridge: true
+  nav2: false
+  slam: false

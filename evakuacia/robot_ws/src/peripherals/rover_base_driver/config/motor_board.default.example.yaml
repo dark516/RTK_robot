@@ -1,0 +1,13 @@
+configure_motor_board:
+  ros__parameters:
+    serial_device: /tmp/rover_devices/motor_controller
+    baudrate: 115200
+    motor_type: 1
+    encoder_lines: 11
+    reduction_ratio: 45
+    wheel_diameter_mm: 60.0
+    deadzone_pwm: 1600
+    configure_pid: false
+    pid_p: 0.8
+    pid_i: 0.06
+    pid_d: 0.5

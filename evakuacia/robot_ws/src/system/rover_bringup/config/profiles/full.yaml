@@ -1,0 +1,25 @@
+profile:
+  name: full
+  description: Full physical rover stack for normal operation.
+
+components:
+  base: true
+  odometry: true
+  description: true
+  localization: true
+  twist_mux: true
+  imu: true
+  lidar: true
+  led_strip: true
+  web: true
+  display: true
+  rosboard: true
+  agent: true
+  fleet_bridge: true
+  nav2: true
+  slam: false
+
+  octoliner: false
+  waveshare_audio: false
+  camera: true
+  vision: false

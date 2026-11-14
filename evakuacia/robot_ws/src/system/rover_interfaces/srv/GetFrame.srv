@@ -1,0 +1,8 @@
+# Returns the latest camera frame encoded as JPEG.
+---
+bool success
+string message
+sensor_msgs/CompressedImage frame
+uint32 width
+uint32 height
+float32 age_sec

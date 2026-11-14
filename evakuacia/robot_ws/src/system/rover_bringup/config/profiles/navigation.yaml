@@ -1,0 +1,24 @@
+profile:
+  name: navigation
+  description: Hardware profile used with Nav2 and twist_mux.
+
+components:
+  base: true
+  odometry: true
+  description: true
+  localization: true
+  imu: true
+  lidar: true
+  camera: true
+  vision: true
+  led_strip: false
+  octoliner: false
+  waveshare_audio: false
+  web: true
+  display: false
+  rosboard: false
+  agent: false
+  fleet_bridge: false
+  twist_mux: true
+  nav2: true
+  slam: false

@@ -1,0 +1,44 @@
+mcp_server:
+  mcp_host: 127.0.0.1
+  # rover_web uses 8765, so the agent MCP server uses a separate local port.
+  mcp_port: 8766
+  cmd_vel_topic: '@topics.cmd_vel_test'
+  led_set_state_service: '@topics.led_set_state'
+  led_state_topic: '@topics.led_state'
+  nav2_action_name: /navigate_to_pose
+  odom_topic: '@topics.odom'
+  amcl_pose_topic: '@topics.amcl_pose'
+  scan_topic: '@topics.scan'
+
+text_agent:
+  robot_id: '@robot.id'
+  mcp_url: '@mcp.url'
+  text_command_topic: '@topics.agent_text_command'
+  status_topic: '@topics.agent_status'
+  answer_topic: '@topics.agent_answer'
+  prompt_file: '@paths.default_agent_prompt'
+  # Previous external endpoint, retained as a documented fallback:
+  # llm_base_url: 'https://ai.sverk.io/v1'
+  # llm_model: 'qwen35'
+
+  # OpenAI-compatible local gateway running on the operator laptop.
+  llm_base_url: 'http://192.168.1.78:8083/v1'
+  llm_model: 'qwen3.5-9b'
+  llm_api_key_file: '~/.config/sverk-rover/local_llm_api_key'
+  llm_api_key_env: OPENAI_API_KEY
+  native_tool_mode: auto
+  timeout_s: 720.0
+  max_tool_rounds: 3
+
+fleet_bridge:
+  robot_id: '@robot.id'
+  mqtt_host: 10.63.18.111
+  mqtt_port: 1883
+  mqtt_topic_prefix: fleet/v1/robots
+  mqtt_username: '@env.FLEET_MQTT_USERNAME'
+  mqtt_password_env: FLEET_MQTT_PASSWORD
+  command_topic: '@topics.agent_text_command'
+  answer_topic: '@topics.agent_answer'
+  status_topic: '@topics.agent_status'
+  duplicate_cache_size: 100
+  agent_command_timeout_sec: 300.0

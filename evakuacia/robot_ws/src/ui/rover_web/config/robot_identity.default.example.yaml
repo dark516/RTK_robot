@@ -1,0 +1,7 @@
+robot_id: sverh-rover-0001
+hostname: sverh-rover-0001
+company: "Сверх"
+model: mecanum-rover-v1
+serial_number: SVR-0001
+software_version: 0.3.0
+web_interface_version: 0.1.0

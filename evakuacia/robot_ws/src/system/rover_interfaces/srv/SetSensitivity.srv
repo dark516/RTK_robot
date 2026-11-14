@@ -1,0 +1,5 @@
+float32 sensitivity
+---
+bool success
+string message
+float32 applied_sensitivity

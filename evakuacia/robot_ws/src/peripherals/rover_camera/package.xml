@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>rover_camera</name>
+  <version>0.1.0</version>
+  <description>USB camera driver for publishing raw images from the rover.</description>
+  <maintainer email="maintainer@example.com">Rover Team</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>rcl_interfaces</depend>
+  <depend>rover_interfaces</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+
+  <exec_depend>python3-opencv</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

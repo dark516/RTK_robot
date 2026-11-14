@@ -1,0 +1,14 @@
+device_manager:
+  runtime_dir: /tmp/rover_devices
+  discovery_mode: configured
+  device_config: ~/.config/rover/devices.json
+  devices:
+    motor_controller:
+      required: true
+      runtime_symlink: motor_controller
+    imu:
+      required: true
+      runtime_symlink: imu
+    lidar:
+      required: true
+      runtime_symlink: lidar

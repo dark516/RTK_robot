@@ -1,0 +1,23 @@
+std_msgs/Header header
+bool connected
+bool enabled
+uint16 led_count
+uint16 lit_count
+float32 brightness
+string effect
+float32 effect_speed_hz
+uint32 gpio_pin
+string pixel_order
+string backend
+string status_message
+string transport
+uint32 spi_bus
+uint32 spi_device
+uint8 red
+uint8 green
+uint8 blue
+uint8 secondary_red
+uint8 secondary_green
+uint8 secondary_blue
+# Packed as 0xRRGGBB for each pixel in the current preview frame.
+uint32[] preview_colors

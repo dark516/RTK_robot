@@ -1,0 +1,20 @@
+yahboom_imu_node:
+  ros__parameters:
+    serial_device: /tmp/rover_devices/imu
+    baudrate: 115200
+    frame_id: imu_link
+    imu_topic: /imu/data
+    mag_topic: /imu/mag
+    euler_topic: /imu/euler
+    frame_count_topic: /imu/valid_frame_count
+    publish_rate_hz: 100.0
+    data_timeout_sec: 0.5
+    publish_sensor_orientation: false
+    axis_map: [0, 1, 2]
+    axis_signs: [1, 1, 1]
+    gyro_stddev_radps: 0.035
+    accel_stddev_mps2: 0.5
+    orientation_roll_pitch_stddev_rad: 0.1
+    orientation_yaw_stddev_rad: 0.35
+    magnetic_scale_tesla_per_lsb: 1.0e-07
+    magnetic_stddev_tesla: 8.0e-06

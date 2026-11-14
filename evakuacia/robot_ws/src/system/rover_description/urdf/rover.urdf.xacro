@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<robot name="rover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!--
+    Dimensions and poses are derived from "malyi rover V1.2.step".
+    base_link is centered between the four wheel axles. ROS axes are
+    x forward, y left and z up.
+  -->
+  <xacro:arg name="wheel_radius" default="0.03"/>
+  <xacro:arg name="wheel_width" default="0.037"/>
+  <xacro:arg name="wheelbase" default="0.13961"/>
+  <xacro:arg name="track_width" default="0.181"/>
+  <xacro:arg name="chassis_length" default="0.2006"/>
+  <xacro:arg name="chassis_width" default="0.1990"/>
+  <xacro:arg name="chassis_height" default="0.0532"/>
+  <xacro:arg name="chassis_x" default="0.0125"/>
+  <xacro:arg name="chassis_y" default="0.0"/>
+  <xacro:arg name="chassis_z" default="0.0096"/>
+  <xacro:arg name="imu_x" default="0.0332"/>
+  <xacro:arg name="imu_y" default="-0.0837"/>
+  <xacro:arg name="imu_z" default="0.0435"/>
+  <xacro:arg name="imu_roll" default="0.0"/>
+  <xacro:arg name="imu_pitch" default="0.0"/>
+  <xacro:arg name="imu_yaw" default="1.57079632679"/>
+  <xacro:arg name="lidar_x" default="0.0662"/>
+  <xacro:arg name="lidar_y" default="0.0"/>
+  <xacro:arg name="lidar_z" default="0.0837"/>
+  <xacro:arg name="lidar_roll" default="0.0"/>
+  <xacro:arg name="lidar_pitch" default="0.0"/>
+  <xacro:arg name="lidar_yaw" default="0.0"/>
+
+  <xacro:property name="r" value="$(arg wheel_radius)"/>
+  <xacro:property name="ww" value="$(arg wheel_width)"/>
+  <xacro:property name="wb" value="$(arg wheelbase)"/>
+  <xacro:property name="tw" value="$(arg track_width)"/>
+  <xacro:property name="cl" value="$(arg chassis_length)"/>
+  <xacro:property name="cw" value="$(arg chassis_width)"/>
+  <xacro:property name="ch" value="$(arg chassis_height)"/>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="$(arg chassis_x) $(arg chassis_y) $(arg chassis_z)"/>
+      <geometry><box size="${cl} ${cw} ${ch}"/></geometry>
+      <material name="dark"><color rgba="0.18 0.18 0.20 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="$(arg chassis_x) $(arg chassis_y) $(arg chassis_z)"/>
+      <geometry><box size="${cl} ${cw} ${ch}"/></geometry>
+    </collision>
+    <inertial>
+      <mass value="3.0"/>
+      <origin xyz="$(arg chassis_x) $(arg chassis_y) $(arg chassis_z)"/>
+      <inertia ixx="0.0106" ixy="0" ixz="0" iyy="0.0108" iyz="0" izz="0.0200"/>
+    </inertial>
+  </link>
+
+  <xacro:macro name="wheel" params="name x y axis_y">
+    <link name="${name}_wheel_link">
+      <visual>
+        <origin rpy="1.57079632679 0 0"/>
+        <geometry><cylinder radius="${r}" length="${ww}"/></geometry>
+        <material name="rubber"><color rgba="0.05 0.05 0.05 1"/></material>
+      </visual>
+      <collision>
+        <origin rpy="1.57079632679 0 0"/>
+        <geometry><cylinder radius="${r}" length="${ww}"/></geometry>
+      </collision>
+      <inertial>
+        <mass value="0.15"/>
+        <inertia ixx="0.000051" ixy="0" ixz="0" iyy="0.000068" iyz="0" izz="0.000051"/>
+      </inertial>
+    </link>
+    <joint name="${name}_wheel_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${name}_wheel_link"/>
+      <origin xyz="${x} ${y} 0"/>
+      <axis xyz="0 ${axis_y} 0"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:wheel name="front_left"  x="${ wb/2}" y="${ tw/2}" axis_y="1"/>
+  <xacro:wheel name="front_right" x="${ wb/2}" y="${-tw/2}" axis_y="-1"/>
+  <xacro:wheel name="rear_left"   x="${-wb/2}" y="${ tw/2}" axis_y="1"/>
+  <xacro:wheel name="rear_right"  x="${-wb/2}" y="${-tw/2}" axis_y="-1"/>
+
+  <link name="imu_link">
+    <visual>
+      <geometry><box size="0.0246 0.0310 0.0049"/></geometry>
+      <material name="imu_blue"><color rgba="0.1 0.3 0.8 1"/></material>
+    </visual>
+    <collision>
+      <geometry><box size="0.0246 0.0310 0.0049"/></geometry>
+    </collision>
+    <inertial>
+      <mass value="0.015"/>
+      <inertia ixx="0.00000123" ixy="0" ixz="0"
+               iyy="0.00000079" iyz="0" izz="0.00000196"/>
+    </inertial>
+  </link>
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="$(arg imu_x) $(arg imu_y) $(arg imu_z)"
+            rpy="$(arg imu_roll) $(arg imu_pitch) $(arg imu_yaw)"/>
+  </joint>
+
+  <link name="lidar_link">
+    <visual>
+      <geometry><cylinder radius="0.028" length="0.0414"/></geometry>
+      <material name="lidar_red"><color rgba="0.75 0.08 0.08 1"/></material>
+    </visual>
+    <collision>
+      <geometry><cylinder radius="0.028" length="0.0414"/></geometry>
+    </collision>
+    <inertial>
+      <mass value="0.17"/>
+      <inertia ixx="0.000057" ixy="0" ixz="0"
+               iyy="0.000057" iyz="0" izz="0.000067"/>
+    </inertial>
+  </link>
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="$(arg lidar_x) $(arg lidar_y) $(arg lidar_z)"
+            rpy="$(arg lidar_roll) $(arg lidar_pitch) $(arg lidar_yaw)"/>
+  </joint>
+</robot>

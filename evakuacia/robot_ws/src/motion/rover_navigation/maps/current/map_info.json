@@ -1,0 +1,6 @@
+{
+  "label": "room",
+  "created_at": "2026-06-19T00:19:38+03:00",
+  "occupancy_map": "map.yaml",
+  "posegraph_saved": true
+}

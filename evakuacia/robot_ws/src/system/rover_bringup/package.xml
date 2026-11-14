@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>rover_bringup</name>
+  <version>0.4.3</version>
+  <description>Top-level launch and configuration for the complete rover.</description>
+  <maintainer email="maintainer@example.com">Rover Team</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>rover_device_manager</exec_depend>
+  <exec_depend>rover_base_driver</exec_depend>
+  <exec_depend>rover_camera</exec_depend>
+  <exec_depend>rover_vision</exec_depend>
+  <exec_depend>rover_led_strip</exec_depend>
+  <exec_depend>rover_octoliner</exec_depend>
+  <exec_depend>rover_waveshare_audio</exec_depend>
+  <exec_depend>rover_web</exec_depend>
+  <exec_depend>rover_display</exec_depend>
+  <exec_depend>rosboard</exec_depend>
+  <exec_depend>rover_wheel_odometry</exec_depend>
+  <exec_depend>rover_imu</exec_depend>
+  <exec_depend>rover_description</exec_depend>
+  <exec_depend>rover_navigation</exec_depend>
+  <exec_depend>rover_agent_mcp</exec_depend>
+  <exec_depend>fleet_text_bridge_ros2</exec_depend>
+  <exec_depend>robot_localization</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>twist_mux</exec_depend>
+  <exec_depend>sllidar_ros2</exec_depend>
+  <exec_depend>rover_lidar_filter</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

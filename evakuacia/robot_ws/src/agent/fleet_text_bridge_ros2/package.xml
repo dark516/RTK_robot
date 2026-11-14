@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>fleet_text_bridge_ros2</name>
+  <version>1.0.0</version>
+  <description>MQTT to ROS 2 String topic bridge for robot text commands.</description>
+  <maintainer email="maintainer@example.com">Project Maintainer</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>python3-paho-mqtt</exec_depend>
+  <exec_depend>rover_agent_mcp</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

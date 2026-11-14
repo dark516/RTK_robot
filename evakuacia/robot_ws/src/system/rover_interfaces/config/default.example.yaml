@@ -1,0 +1,4 @@
+interfaces:
+  runtime_parameters: {}
+  note: rover_interfaces defines messages and services and has no ROS node config.
+

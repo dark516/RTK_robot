@@ -1,0 +1,41 @@
+topics:
+  cmd_vel: /cmd_vel
+  cmd_vel_nav: /cmd_vel_nav
+  cmd_vel_teleop: /cmd_vel_teleop
+  cmd_vel_test: /cmd_vel_test
+  wheel_encoders: /wheel/encoders
+  wheel_odometry: /wheel/odometry
+  odom: /odom
+  scan_raw: /scan
+  scan: /scan_filtered
+  image_raw: /image_raw
+  image_raw_compressed: /image_raw/compressed
+  image_processed: /image_processed
+  image_processed_compressed: /image_processed/compressed
+  detections: /detections
+  imu_data: /imu/data
+  imu_mag: /imu/mag
+  imu_euler: /imu/euler
+  imu_frame_count: /imu/valid_frame_count
+  diagnostics: /diagnostics
+  led_state: /led_strip/state
+  led_set_state: /led_strip/set_state
+  voice_text: /voice/text
+  voice_status: /waveshare_audio/status
+  voice_transcript: /voice/transcript
+  agent_text: /agent/text
+  agent_text_command: /agent/text_command
+  agent_status: /agent/status
+  agent_answer: /agent/answer
+  amcl_pose: /amcl_pose
+  battery_state: /battery/state
+
+frames:
+  map: map
+  odom: odom
+  base: base_link
+  imu: imu_link
+  lidar: lidar_link
+  camera: camera_optical_frame
+  led_strip: led_strip
+  octoliner: octoliner_link
