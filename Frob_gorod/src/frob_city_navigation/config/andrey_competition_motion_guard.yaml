@@ -1,0 +1,35 @@
+motion_guard:
+  ros__parameters:
+    # Conservative field-trial values. Replace with measured stopping data
+    # before the official timed attempt.
+    commissioned: true
+    field_id: c43a70efdac991198839a01c297b69c645189e0938163e701f205425bc5bbba5
+    map_frame: map
+    base_frame: base_footprint
+    raw_cmd_topic: /city/cmd_vel_raw
+    driver_cmd_topic: /cmd_vel
+    map_topic: /city/map_state
+    permit_topic: /city/motion_permit
+    guard_state_topic: /city/guard_state
+    odom_topic: /odometry/filtered
+    enable_emergency_stop_topic: false
+    emergency_stop_topic: /city/emergency_stop
+    allow_map_frame_odom_pose: false
+    evaluation_hz: 50.0
+    footprint_xy: [-0.15, -0.15, 0.15, -0.15, 0.15, 0.15, -0.15, 0.15]
+    braking_deceleration_mps2: 0.25
+    braking_latency_s: 0.35
+    hard_max_linear_speed_mps: 0.12
+    hard_max_yaw_rate_radps: 0.45
+    path_lateral_tolerance_m: 0.12
+    permit_max_age_s: 0.20
+    raw_command_max_age_s: 0.20
+    map_max_age_s: 1.25
+    pose_max_age_s: 0.30
+    odom_max_age_s: 0.30
+    max_permit_lifetime_s: 0.20
+    stationary_linear_max_mps: 0.01
+    stationary_angular_max_radps: 0.03
+    footprint_edge_sample_m: 0.02
+    rollout_step_m: 0.02
+    geometry_epsilon_m: 0.000001

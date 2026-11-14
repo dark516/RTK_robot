@@ -1,0 +1,24 @@
+# WP11 COMPONENT TEST FIXTURE ONLY. NOT COMPETITION-CALIBRATED.
+schema_version: 2
+frames:
+  map: map
+  odom: odom
+  base: base_footprint
+max_speed_mps: 0.15
+max_yaw_rate_radps: 0.6
+xy_tolerance_m: 0.05
+yaw_tolerance_rad: 0.10
+stationary_linear_mps: 0.01
+stationary_angular_radps: 0.03
+observation_attempts: 2
+segment_retry_budget: 1
+timeouts:
+  permission_max_age_s: 0.20
+  map_max_age_s: 1.0
+  pose_max_age_s: 0.20
+  detection_max_age_s: 0.50
+  tf_lookup_s: 0.10
+  observation_action_s: 3.0
+  action_accept_s: 1.0
+  action_cancel_s: 1.0
+  no_progress_s: 30.0

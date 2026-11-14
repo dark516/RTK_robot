@@ -1,5 +1,6 @@
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 from launch.launch_description_sources import PythonLaunchDescriptionSource
@@ -12,7 +13,10 @@ def generate_launch_description():
         package='ros2_arduino_bridge',
         executable='arduino_bridge',
         name='arduino_bridge',
-        output='screen'
+        output='screen',
+        # The lidar is /dev/ttyUSB0. Explicitly pin the Arduino so the bridge
+        # never probes and corrupts the lidar serial stream during reconnects.
+        arguments=['--port', '/dev/ttyACM0']
     )
     #Lidar YDLIDAR X4
     lidar_launch = IncludeLaunchDescription(
@@ -30,7 +34,8 @@ def generate_launch_description():
     imu_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(get_package_share_directory('ros2_mpu6050'), 'launch', 'ros2_mpu6050.launch.py')
-        )
+        ),
+        condition=IfCondition(LaunchConfiguration('include_imu')),
     )
 
     #Description
@@ -48,6 +53,11 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        DeclareLaunchArgument(
+            'include_imu',
+            default_value='true',
+            description='Start MPU6050 driver; disable when the sensor is unavailable',
+        ),
         arduino_bridge,
         lidar_launch,
         imu_launch,

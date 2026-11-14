@@ -1,0 +1,36 @@
+uint8 TARGET=0
+uint8 EXPLORE_STOPS=1
+uint8 EXPLORE_PARKING=2
+uint8 CHECK_POI=3
+
+string run_id
+string map_instance_id
+uint64 request_id
+uint64 minimum_revision
+uint8 goal_kind
+string target_id
+string[] exclude_target_ids
+---
+uint8 ROUTE_READY=0
+uint8 NEED_OBSERVATION=1
+uint8 ALREADY_AT_TERMINAL=2
+uint8 NO_ROUTE=3
+uint8 NO_REACHABLE_FRONTIER=4
+uint8 INVALID_REQUEST=5
+uint8 NOT_READY=6
+uint8 STALE_SESSION=7
+
+uint8 status
+uint64 request_id
+string run_id
+string map_instance_id
+uint64 revision
+string route_id
+string selected_target_id
+geometry_msgs/PoseStamped start_pose
+bool reaches_requested_target
+float32 estimated_total_cost_s
+bool cost_uses_unknown_gates
+frob_city_interfaces/RouteSegment[] executable_prefix
+string terminal_observation_id
+string reason

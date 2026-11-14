@@ -1,0 +1,40 @@
+motion_guard:
+  ros__parameters:
+    # Safety default.  Set true only after WP15 physical measurements are filled.
+    commissioned: false
+    field_id: ""
+    map_frame: "map"
+    base_frame: "base_link"
+
+    raw_cmd_topic: "/city/cmd_vel_raw"
+    driver_cmd_topic: "/cmd_vel"
+    map_topic: "/city/map_state"
+    permit_topic: "/city/motion_permit"
+    guard_state_topic: "/city/guard_state"
+    odom_topic: "/odom"
+
+    enable_emergency_stop_topic: false
+    emergency_stop_topic: "/city/emergency_stop"
+    allow_map_frame_odom_pose: false
+    evaluation_hz: 50.0
+
+    # REQUIRED before commissioned=true.  Do not copy guessed values here.
+    # One invalid numeric sentinel keeps ROS type=DOUBLE_ARRAY while fail-closed.
+    footprint_xy: [0.0]
+    braking_deceleration_mps2: -1.0
+    braking_latency_s: -1.0
+    hard_max_linear_speed_mps: -1.0
+    hard_max_yaw_rate_radps: -1.0
+    path_lateral_tolerance_m: -1.0
+
+    permit_max_age_s: 0.20
+    raw_command_max_age_s: 0.20
+    map_max_age_s: 1.00
+    pose_max_age_s: 0.20
+    odom_max_age_s: 0.20
+    max_permit_lifetime_s: 0.20
+    stationary_linear_max_mps: 0.01
+    stationary_angular_max_radps: 0.03
+    footprint_edge_sample_m: 0.02
+    rollout_step_m: 0.02
+    geometry_epsilon_m: 0.000001

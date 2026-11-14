@@ -1,0 +1,40 @@
+traffic_sign_detector:
+  ros__parameters:
+    model_path: "models/best.pt"
+    frame_width: 1280
+    frame_height: 720
+    default_confidence: 0.80
+    bus_stop_confidence: 0.40
+    parking_confidence: 0.60
+    focal_length_px: 1500.0
+    parking_distance_scale: 1.54
+    filter_size: 5
+
+    signs.straight.dimension_m: 0.100
+    signs.straight.axis: "height"
+    signs.left.dimension_m: 0.100
+    signs.left.axis: "height"
+    signs.right.dimension_m: 0.100
+    signs.right.axis: "height"
+    signs.no_left.dimension_m: 0.100
+    signs.no_left.axis: "height"
+    signs.no_right.dimension_m: 0.100
+    signs.no_right.axis: "height"
+    signs.bus_stop.dimension_m: 0.130
+    signs.bus_stop.axis: "height"
+    signs.parking.dimension_m: 0.090
+    signs.parking.axis: "mean"
+    signs.obstacle.dimension_m: 0.130
+    signs.obstacle.axis: "width"
+
+    input_source: "compressed_topic"
+    compressed_image_topic: "/camera/image_raw/compressed"
+    detections_topic: "/traffic_sign/detections_legacy"
+    publish_annotated_image: false
+    annotated_compressed_topic: "/traffic_sign/annotated_image/compressed"
+    publish_annotated_compressed: true
+    annotated_jpeg_quality: 70
+    display_window: false
+    draw_debug_info: true
+    yolo_device: "cpu"
+    yolo_image_size: 0

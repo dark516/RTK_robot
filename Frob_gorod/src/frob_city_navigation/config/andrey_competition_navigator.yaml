@@ -1,0 +1,23 @@
+/**:
+  ros__parameters:
+    map_frame: map
+    base_frame: base_footprint
+    reset_map_on_start: true
+    required_unique_bus_stops: 2
+    parking_prior_enabled: false
+    parking_prior_observation_id: ''
+    require_system_ready: true
+    system_ready_max_age_s: 0.50
+    permit_hz: 10.0
+    permit_valid_for_s: 0.20
+    state_hz: 5.0
+    verification_hz: 20.0
+    map_max_age_s: 1.25
+    odom_max_age_s: 0.40
+    guard_max_age_s: 0.40
+    terminal_verify_timeout_s: 2.5
+    execution_readiness_timeout_s: 3.0
+    boarding_dwell_s: 2.2
+    stationary_linear_max_mps: 0.01
+    stationary_angular_max_radps: 0.03
+    observation_duration_s: 6.0

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1014">
+  <title>Frob City — центр управления</title>
+  <link rel="stylesheet" href="/assets/app.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div id="disconnect-banner" class="disconnect-banner" role="alert">СВЯЗЬ С РОБОТОМ ПОТЕРЯНА — КОМАНДЫ ЗАБЛОКИРОВАНЫ</div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true"><span>F</span></div>
+      <div><p class="eyebrow">AUTONOMY CONTROL</p><h1>Frob City</h1></div>
+    </div>
+    <div class="run-strip">
+      <div><span>ЗАПУСК</span><strong id="run-id">—</strong></div>
+      <div><span>РЕВИЗИЯ</span><strong id="map-revision">—</strong></div>
+      <div><span>ВРЕМЯ</span><strong id="clock">--:--:--</strong></div>
+    </div>
+    <a class="settings-link" href="/settings/calibration">КАЛИБРОВКА ПОЛЯ <span>↗</span></a>
+    <div id="connection-chip" class="status-chip pending"><i></i><span>ПОДКЛЮЧЕНИЕ</span></div>
+  </header>
+
+  <main class="dashboard">
+    <section class="panel map-panel" aria-labelledby="map-title">
+      <div class="panel-head">
+        <div><p class="kicker">LIVE FIELD / MAP</p><h2 id="map-title">Карта города</h2></div>
+        <div class="map-tools" aria-label="Управление картой">
+          <button id="map-grid" class="tool active" type="button" aria-label="Показать сетку поля">СЕТКА</button>
+          <button id="map-sites" class="tool active" type="button" aria-label="Показать места знаков">ТОЧКИ</button>
+          <button id="map-follow" class="tool active" type="button" aria-label="Следовать за роботом">СЛЕДИТЬ</button>
+          <button id="map-fit" class="tool" type="button" aria-label="Показать карту целиком">ВПИСАТЬ</button>
+          <button id="map-zoom-in" class="tool square" type="button" aria-label="Увеличить карту">+</button>
+          <button id="map-zoom-out" class="tool square" type="button" aria-label="Уменьшить карту">−</button>
+        </div>
+      </div>
+      <div class="field-strip" aria-label="Состояние поля">
+        <div><span>ПРЕСЕТ ПОЛЯ</span><strong id="field-preset">не загружен</strong></div>
+        <div><span>СЕТКА</span><strong id="field-grid-state">5 × 5</strong></div>
+        <div><span>ПОЗИЦИЯ</span><strong id="localization-state">нет TF</strong></div>
+        <div><span>ЗНАКИ НА КАРТЕ</span><strong id="known-sign-count">0</strong></div>
+      </div>
+      <div class="map-stage">
+        <canvas id="map-canvas" aria-label="Карта, маршрут, робот и найденные знаки"></canvas>
+        <div id="map-empty" class="map-empty"><span class="radar"></span><b>ОЖИДАНИЕ /map</b><small>Карта появится после публикации OccupancyGrid</small></div>
+        <div class="map-coordinates"><span id="robot-coordinates">X — · Y — · Ψ —</span><span id="map-scale">— м</span></div>
+        <div class="map-legend" aria-label="Легенда карты">
+          <span><i class="robot-dot"></i>Робот</span><span><i class="route-line"></i>Маршрут</span>
+          <span><i class="grid-line"></i>Сетка 5×5</span><span><i class="site-dot"></i>Место знака</span>
+          <span><i class="permit-fill"></i>Коридор</span><span><i class="sign-dot"></i>Подтверждён</span>
+        </div>
+      </div>
+    </section>
+
+    <aside id="mission-panel" class="panel mission-panel" aria-labelledby="mission-title">
+      <div class="panel-head"><div><p class="kicker">MISSION FSM</p><h2 id="mission-title">Миссия</h2></div><span id="mission-live" class="tiny-state">НЕТ ДАННЫХ</span></div>
+      <div class="phase-display"><span>ФАЗА</span><strong id="mission-phase">—</strong><small id="mission-execution">—</small></div>
+      <dl class="telemetry-list">
+        <div><dt>Цель</dt><dd id="mission-objective">—</dd></div>
+        <div><dt>Маршрут</dt><dd id="mission-route">—</dd></div>
+        <div><dt>Сегмент</dt><dd id="mission-segment">—</dd></div>
+        <div><dt>Поколение</dt><dd id="mission-generation">—</dd></div>
+      </dl>
+      <div class="stops-block"><div><span>ОСТАНОВКИ</span><strong id="stops-count">0 / —</strong></div><div class="progress"><i id="stops-progress"></i></div><p id="serviced-stops">Ещё не обслужены</p></div>
+      <div class="dwell"><span>ПОСАДКА</span><strong id="dwell-value">0.0 с</strong><div class="pulse-track"><i id="dwell-progress"></i></div></div>
+      <p id="mission-reason" class="reason">Ожидание состояния navigator</p>
+    </aside>
+
+    <section class="panel camera-panel" aria-labelledby="camera-title">
+      <div class="panel-head">
+        <div><p class="kicker">PERCEPTION FEED</p><h2 id="camera-title">Камера и распознавание</h2></div>
+        <label class="switch"><input id="camera-enabled" type="checkbox" checked><span></span><b>ПОТОК</b></label>
+      </div>
+      <div class="camera-frame">
+        <img id="camera-stream" alt="Размеченное изображение камеры">
+        <div id="camera-placeholder" class="camera-placeholder"><div class="aperture"></div><b>НЕТ ВИДЕО</b><span>Ожидание размеченного потока детектора</span></div>
+        <div class="camera-hud"><span id="camera-sequence">FRAME —</span><span id="camera-age">AGE —</span></div>
+      </div>
+    </section>
+
+    <section id="perception-panel" class="panel perception-panel" aria-labelledby="perception-title">
+      <div class="panel-head"><div><p class="kicker">CAMERA / RAW</p><h2 id="perception-title">Сейчас видит камера</h2></div><strong id="detection-count" class="counter">0</strong></div>
+      <div id="detection-list" class="detection-list"><p class="empty-line">Детекций пока нет</p></div>
+    </section>
+
+    <section id="known-signs-panel" class="panel known-signs-panel" aria-labelledby="known-signs-title">
+      <div class="panel-head"><div><p class="kicker">SEMANTIC MAP</p><h2 id="known-signs-title">Знаки на карте</h2></div><strong id="semantic-sign-count" class="counter">0</strong></div>
+      <div class="sign-summary"><span id="sign-binding-state">Ожидание подтверждённого наблюдения</span><a href="/settings/calibration">править привязку ↗</a></div>
+      <div id="known-sign-list" class="known-sign-list"><p class="empty-line">Подтверждённых знаков пока нет</p></div>
+    </section>
+
+    <section id="guard-panel" class="panel guard-panel" aria-labelledby="guard-title">
+      <div class="panel-head"><div><p class="kicker">MOTION ENVELOPE</p><h2 id="guard-title">Движение</h2></div><div id="motion-lamp" class="motion-lamp"><i></i><span>HOLD</span></div></div>
+      <div class="velocity-grid">
+        <article><span>ЗАПРОС</span><strong id="raw-linear">—</strong><small>м/с</small><em id="raw-angular">ω —</em></article>
+        <article><span>НА МОТОРЫ</span><strong id="final-linear">—</strong><small>м/с</small><em id="final-angular">ω —</em></article>
+        <article><span>ИЗМЕРЕНО</span><strong id="odom-linear">—</strong><small>м/с</small><em id="odom-angular">ω —</em></article>
+      </div>
+      <div class="guard-facts"><span id="guard-stopped">STOP: —</span><span id="guard-fault">FAULT: —</span><span id="permit-sequence">PERMIT: —</span></div>
+      <p id="guard-reason" class="reason warning">Ожидание motion_guard</p>
+    </section>
+
+    <section id="readiness-panel" class="panel readiness-panel" aria-labelledby="readiness-title">
+      <div class="panel-head"><div><p class="kicker">SYSTEM PULSE</p><h2 id="readiness-title">Готовность</h2></div><span id="ready-count">0 / 0</span></div>
+      <div id="source-grid" class="source-grid"></div>
+      <details class="diagnostics"><summary>ROS diagnostics <span id="diagnostic-count">0</span></summary><div id="diagnostic-list"></div></details>
+    </section>
+
+    <section id="event-panel" class="panel event-panel" aria-labelledby="event-title">
+      <div class="panel-head"><div><p class="kicker">EVENT RECORDER</p><h2 id="event-title">Журнал</h2></div><button id="clear-events" class="tool" type="button">ОЧИСТИТЬ ВИД</button></div>
+      <ol id="event-list" class="event-list"><li class="empty-line">Событий пока нет</li></ol>
+    </section>
+  </main>
+
+  <footer id="control-deck" class="control-deck" aria-label="Управление миссией">
+    <div class="control-label"><span>MISSION CONTROL</span><small id="control-status">Сервис недоступен</small></div>
+    <div class="control-buttons">
+      <button type="button" data-command="START" class="command start"><span>▶</span><b>START</b><small>начать</small></button>
+      <button type="button" data-command="PAUSE" class="command"><span>Ⅱ</span><b>PAUSE</b><small>пауза</small></button>
+      <button type="button" data-command="RESUME" class="command"><span>▷</span><b>RESUME</b><small>продолжить</small></button>
+      <button type="button" data-command="RESET" class="command reset"><span>↺</span><b>RESET</b><small>сбросить</small></button>
+      <button type="button" data-command="ABORT" class="command abort"><span>■</span><b>ABORT</b><small>остановить</small></button>
+    </div>
+  </footer>
+  <div id="toast-stack" class="toast-stack" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+detection_adapter:
+  ros__parameters:
+    input_topic: "/traffic_sign/detections_legacy"
+    output_topic: "/traffic_sign/detections"
+    image_width_px: 1280
+    image_height_px: 720
+    output_frame_id: ""
+    calibration_id: "USER_CAMERA_RANGE_CALIBRATED_2026-09-13"
+
+    # Legacy frames contain no exposure/blur/coverage health metadata. Keep
+    # empty frames invalid until WP15 camera qualification proves they may be
+    # used as negative evidence.
+    allow_qualified_empty_frames: false
+
+    # The camera's monocular range was calibrated by the robot owner.
+    # Preserve the legacy detector range as valid canonical evidence so the
+    # map planner can associate detections with configured sign sites.
+    trust_legacy_range: true
+    range_stddev_m: 0.10

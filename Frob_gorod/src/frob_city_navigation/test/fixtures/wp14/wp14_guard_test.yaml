@@ -1,0 +1,33 @@
+# WP13 HEADLESS TEST ONLY. These numbers are synthetic and MUST NOT be used for real motion.
+motion_guard:
+  ros__parameters:
+    commissioned: true
+    field_id: WP14_TEST_FIELD
+    map_frame: map
+    base_frame: base_link
+    raw_cmd_topic: /city/cmd_vel_raw
+    driver_cmd_topic: /city/replay/cmd_vel_sink
+    map_topic: /city/map_state
+    permit_topic: /city/motion_permit
+    guard_state_topic: /city/guard_state
+    odom_topic: /odom
+    enable_emergency_stop_topic: false
+    allow_map_frame_odom_pose: true
+    evaluation_hz: 30.0
+    footprint_xy: [-0.10, -0.08, 0.10, -0.08, 0.10, 0.08, -0.10, 0.08]
+    braking_deceleration_mps2: 1.0
+    braking_latency_s: 0.05
+    hard_max_linear_speed_mps: 0.20
+    hard_max_yaw_rate_radps: 0.80
+    path_lateral_tolerance_m: 0.08
+    permit_max_age_s: 0.20
+    raw_command_max_age_s: 0.20
+    map_max_age_s: 1.00
+    pose_max_age_s: 0.30
+    odom_max_age_s: 0.30
+    max_permit_lifetime_s: 0.20
+    stationary_linear_max_mps: 0.01
+    stationary_angular_max_radps: 0.03
+    footprint_edge_sample_m: 0.02
+    rollout_step_m: 0.02
+    geometry_epsilon_m: 0.000001

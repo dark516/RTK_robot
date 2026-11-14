@@ -18,6 +18,10 @@
   <depend>robot_state_publisher</depend>
   <depend>joint_state_publisher</depend>
   <depend>sllidar_ros2</depend>
+  <exec_depend>frob_description</exec_depend>
+  <exec_depend>frob_odometry</exec_depend>
+  <exec_depend>lidar_filter</exec_depend>
+  <exec_depend>ros2_mpu6050</exec_depend>
   <export>
     <build_type>ament_python</build_type>
   </export>

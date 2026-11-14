@@ -1,0 +1,20 @@
+# WP11 COMPONENT TEST FIXTURE ONLY. NOT COMPETITION-CALIBRATED.
+schema_version: 2
+required_unique_bus_stops: 2
+bus_stop_dwell_s: 2.2
+parking_settle_time_s: 0.5
+semantic_bootstrap: empty
+allow_reverse: false
+allow_uturn: false
+auto_start: false
+official_attempt_limit_s: null
+start:
+  cell_id: C0_0
+  map_pose: {x_m: 0.4, y_m: 0.4, yaw_rad: 0.0}
+  outgoing_edge_id: C0_0->C1_0
+parking_prior:
+  enabled: true
+  mode: cell_north_of_start
+  observation_id: OBS_EAST
+event_inputs_confirmed: false
+geometry_calibrated: false

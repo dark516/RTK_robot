@@ -1,0 +1,8 @@
+string new_run_id
+string field_id
+---
+bool accepted
+string run_id
+string map_instance_id
+uint64 revision
+string reason

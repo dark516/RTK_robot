@@ -12,10 +12,10 @@ amcl:
     tf_broadcast: true
     transform_tolerance: 0.3
 
-    # Start from a known pose instead of broad/global localization.
-    # IMPORTANT: replace these with your real starting pose in the map frame.
-    set_initial_pose: true
-    always_reset_initial_pose: true
+    # The robot can be placed at different points on the field. Do not silently
+    # reset AMCL to map origin; set the real pose from RViz or /initialpose.
+    set_initial_pose: false
+    always_reset_initial_pose: false
     initial_pose:
       x: 0.0
       y: 0.0
@@ -24,16 +24,16 @@ amcl:
 
     # Motion model / odometry noise
     robot_model_type: "nav2_amcl::DifferentialMotionModel"
-    alpha1: 0.05
-    alpha2: 0.03
-    alpha3: 0.05
-    alpha4: 0.03
+    alpha1: 0.20
+    alpha2: 0.10
+    alpha3: 0.20
+    alpha4: 0.10
     alpha5: 0.0
 
     # Particle filter: enough particles for ambiguous 4x4 m field, but not global localization-heavy
-    min_particles: 800
-    max_particles: 2500
-    pf_err: 0.03
+    min_particles: 1000
+    max_particles: 4000
+    pf_err: 0.02
     pf_z: 0.99
     resample_interval: 1
     recovery_alpha_fast: 0.0
@@ -42,23 +42,23 @@ amcl:
     # Laser model tuned for a small, repeated-looking field
     laser_model_type: "likelihood_field"
     max_beams: 120
-    laser_likelihood_max_dist: 0.5
+    laser_likelihood_max_dist: 0.35
     laser_min_range: -1.0
     laser_max_range: 8.0
-    sigma_hit: 0.12
+    sigma_hit: 0.10
     lambda_short: 0.1
-    z_hit: 0.75
-    z_rand: 0.25
+    z_hit: 0.85
+    z_rand: 0.15
     z_short: 0.0
     z_max: 0.0
 
     # Frequent updates for a tiny map
-    update_min_d: 0.005
-    update_min_a: 0.01
+    update_min_d: 0.02
+    update_min_a: 0.03
     save_pose_rate: -1.0
 
     # Disable beam skipping initially; enable only if dynamic obstacles/noisy scans cause issues
-    do_beamskip: false
+    do_beamskip: true
     beam_skip_distance: 0.5
     beam_skip_error_threshold: 0.9
     beam_skip_threshold: 0.3
@@ -83,58 +83,59 @@ bt_navigator:
 
 controller_server:
   ros__parameters:
-    controller_frequency: 5.0
-    costmap_update_timeout: 0.30
+    controller_frequency: 10.0
+    costmap_update_timeout: 0.50
     min_x_velocity_threshold: 0.001
     min_y_velocity_threshold: 0.001
     min_theta_velocity_threshold: 0.001
     failure_tolerance: 0.3
     odom_topic: /odometry/filtered
-    progress_checker_plugin: "progress_checker"
+    progress_checker_plugins: ["progress_checker"]
     goal_checker_plugins: ["general_goal_checker"]
     controller_plugins: ["FollowPath"]
     use_realtime_priority: false
 
     progress_checker:
-      plugin: "nav2_controller::SimpleProgressChecker"
-      required_movement_radius: 0.5
-      movement_time_allowance: 10.0
+      plugin: "nav2_controller::PoseProgressChecker"
+      required_movement_radius: 0.05
+      required_movement_angle: 0.15
+      movement_time_allowance: 12.0
 
     general_goal_checker:
       stateful: true
       plugin: "nav2_controller::SimpleGoalChecker"
       xy_goal_tolerance: 0.1
-      yaw_goal_tolerance: 3.14
+      yaw_goal_tolerance: 0.40
 
     FollowPath:
       plugin: "nav2_rotation_shim_controller::RotationShimController"
       primary_controller: "nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController"
 
       angular_dist_threshold: 0.50
-      forward_sampling_distance: 0.60
-      rotate_to_heading_angular_vel: 0.4
+      forward_sampling_distance: 0.30
+      rotate_to_heading_angular_vel: 0.45
       max_angular_accel: 2.5
       simulate_ahead_time: 1.0
       rotate_to_goal_heading: false
       rotate_to_heading_once: false
 
-      desired_linear_vel: 0.4
-      lookahead_dist: 0.7
-      min_lookahead_dist: 0.5
-      max_lookahead_dist: 0.7
-      lookahead_time: 1.5
-      transform_tolerance: 0.1
+      desired_linear_vel: 0.18
+      lookahead_dist: 0.30
+      min_lookahead_dist: 0.22
+      max_lookahead_dist: 0.45
+      lookahead_time: 1.2
+      transform_tolerance: 0.25
       use_velocity_scaled_lookahead_dist: true
-      min_approach_linear_velocity: 0.05
-      approach_velocity_scaling_dist: 0.6
+      min_approach_linear_velocity: 0.03
+      approach_velocity_scaling_dist: 0.45
       use_collision_detection: true
-      max_allowed_time_to_collision_up_to_carrot: 1.5
+      max_allowed_time_to_collision_up_to_carrot: 1.0
       use_regulated_linear_velocity_scaling: true
       use_fixed_curvature_lookahead: false
       curvature_lookahead_dist: 0.6
       use_cost_regulated_linear_velocity_scaling: true
-      regulated_linear_scaling_min_radius: 0.85
-      regulated_linear_scaling_min_speed: 0.25
+      regulated_linear_scaling_min_radius: 0.35
+      regulated_linear_scaling_min_speed: 0.08
       use_rotate_to_heading: true #ВРАЩЕНИЕ
       allow_reversing: false
       rotate_to_heading_min_angle: 0.785
@@ -175,8 +176,8 @@ local_costmap:
 
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 2.58
-        inflation_radius: 1.75
+        cost_scaling_factor: 4.0
+        inflation_radius: 0.35
 
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
@@ -215,8 +216,8 @@ global_costmap:
 
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 2.58
-        inflation_radius: 1.75
+        cost_scaling_factor: 4.0
+        inflation_radius: 0.35
 
       always_send_full_costmap: true
 
@@ -229,12 +230,12 @@ map_saver:
 
 planner_server:
   ros__parameters:
-    expected_planner_frequency: 20.0
+    expected_planner_frequency: 5.0
     planner_plugins: ["GridBased"]
     GridBased:
       plugin: "nav2_navfn_planner::NavfnPlanner"
-      tolerance: 0.5
-      use_astar: false
+      tolerance: 0.15
+      use_astar: true
       allow_unknown: true
 
 smoother_server:
@@ -290,10 +291,10 @@ velocity_smoother:
     smoothing_frequency: 20.0
     scale_velocities: false
     feedback: "OPEN_LOOP"
-    max_velocity: [0.5, 0.5, 2.5]
-    min_velocity: [-0.5, -0.5, -2.5]
-    max_accel: [0.3, 0.3, 3.2]
-    max_decel: [-0.5, -0.5, -3.2]
+    max_velocity: [0.28, 0.0, 1.2]
+    min_velocity: [-0.15, 0.0, -1.2]
+    max_accel: [0.4, 0.0, 2.0]
+    max_decel: [-0.5, 0.0, -2.0]
     odom_topic: /odometry/filtered
     odom_duration: 0.1
     deadband_velocity: [0.0, 0.0, 0.0]
@@ -304,7 +305,7 @@ collision_monitor:
     base_frame_id: "base_footprint"
     odom_frame_id: "odom"
     cmd_vel_in_topic: "cmd_vel_smoothed"
-    cmd_vel_out_topic: "cmd_vel"
+    cmd_vel_out_topic: "/city/cmd_vel_raw"
     state_topic: "collision_monitor_state"
     transform_tolerance: 0.2
     source_timeout: 1.0
@@ -316,9 +317,9 @@ collision_monitor:
       type: "polygon"
       action_type: "approach"
       footprint_topic: "/local_costmap/published_footprint"
-      time_before_collision: 3.2
+      time_before_collision: 1.5
       simulation_time_step: 0.1
-      min_points: 6
+      min_points: 3
       visualize: false
       enabled: true
 

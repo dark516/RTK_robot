@@ -41,8 +41,8 @@ class WheelOdometry(Node):
         self.theta = 0.0
         self.left_ticks = 0
         self.right_ticks = 0
-        self.prev_x = 0.0
-        self.prev_theta = 0.0
+        self.linear_velocity = 0.0
+        self.angular_velocity = 0.0
         
         # Подписки на энкодеры
         self.create_subscription(Int32, '/left_motor/encoder/delta', self.left_callback, 10)
@@ -82,18 +82,28 @@ class WheelOdometry(Node):
         delta_distance = (left_dist + right_dist) / 2
         delta_theta = (right_dist - left_dist) / self.wheel_base
         
-        self.theta += delta_theta
-        self.x += delta_distance * math.cos(self.theta)
-        self.y += delta_distance * math.sin(self.theta)
+        # Midpoint integration is substantially more accurate on curved paths.
+        heading_midpoint = self.theta + delta_theta / 2.0
+        self.x += delta_distance * math.cos(heading_midpoint)
+        self.y += delta_distance * math.sin(heading_midpoint)
+        self.theta = math.atan2(
+            math.sin(self.theta + delta_theta),
+            math.cos(self.theta + delta_theta)
+        )
+
+        delta_time = 1.0 / self.update_rate
+        self.linear_velocity = delta_distance / delta_time
+        self.angular_velocity = delta_theta / delta_time
         
         # Публикация данных
-        self.publish_odometry()
+        stamp = self.get_clock().now().to_msg()
+        self.publish_odometry(stamp)
         if self.publish_tf:
-            self.publish_transform()
+            self.publish_transform(stamp)
 
-    def publish_odometry(self):
+    def publish_odometry(self, stamp):
         odom_msg = Odometry()
-        odom_msg.header.stamp = self.get_clock().now().to_msg()
+        odom_msg.header.stamp = stamp
         odom_msg.header.frame_id = self.odom_frame_id
         odom_msg.child_frame_id = self.base_frame_id
         
@@ -102,18 +112,34 @@ class WheelOdometry(Node):
         odom_msg.pose.pose.position.y = self.y
         odom_msg.pose.pose.orientation = self.quaternion_from_yaw(self.theta)
         
-        # Скорость
-        delta_time = 1.0 / self.update_rate
-        odom_msg.twist.twist.linear.x = (self.x - self.prev_x) / delta_time
-        odom_msg.twist.twist.angular.z = (self.theta - self.prev_theta) / delta_time
+        # Twist is expressed in child_frame_id, not in the global odom frame.
+        odom_msg.twist.twist.linear.x = self.linear_velocity
+        odom_msg.twist.twist.angular.z = self.angular_velocity
+
+        # Realistic non-zero uncertainty prevents the EKF from treating wheel
+        # odometry as an exact sensor. Unobserved axes get large variance.
+        odom_msg.pose.covariance = [
+            0.01, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.01, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 1.0e6, 0.0, 0.0, 0.0,
+            0.0, 0.0, 0.0, 1.0e6, 0.0, 0.0,
+            0.0, 0.0, 0.0, 0.0, 1.0e6, 0.0,
+            0.0, 0.0, 0.0, 0.0, 0.0, 0.03,
+        ]
+        odom_msg.twist.covariance = [
+            0.01, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 1.0e6, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 1.0e6, 0.0, 0.0, 0.0,
+            0.0, 0.0, 0.0, 1.0e6, 0.0, 0.0,
+            0.0, 0.0, 0.0, 0.0, 1.0e6, 0.0,
+            0.0, 0.0, 0.0, 0.0, 0.0, 0.03,
+        ]
         
         self.odom_pub.publish(odom_msg)
-        self.prev_x = self.x
-        self.prev_theta = self.theta
 
-    def publish_transform(self):
+    def publish_transform(self, stamp):
         transform = TransformStamped()
-        transform.header.stamp = self.get_clock().now().to_msg()
+        transform.header.stamp = stamp
         transform.header.frame_id = self.odom_frame_id
         transform.child_frame_id = self.base_frame_id
         
