@@ -1,0 +1,24 @@
+profile:
+  name: minimal
+  description: Base, wheel odometry and robot description only.
+
+components:
+  base: true
+  odometry: true
+  description: true
+  localization: true
+  imu: false
+  lidar: false
+  camera: false
+  vision: false
+  led_strip: false
+  octoliner: false
+  waveshare_audio: false
+  web: false
+  display: false
+  rosboard: false
+  agent: false
+  fleet_bridge: false
+  twist_mux: false
+  nav2: false
+  slam: false

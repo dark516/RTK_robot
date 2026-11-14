@@ -1,0 +1,19 @@
+defaults:
+  linear_speed: 0.18
+  approach_speed: 0.1
+  position_tolerance: 0.07
+  angular_speed: 0.32
+  minimum_angular_speed: 0.1
+  angle_tolerance_deg: 3
+  maximum_step_time: 45
+steps:
+- type: move
+  forward: 0.5
+  left: 0
+- type: move_polar
+  distance: 0.5
+  direction_deg: -90
+- type: turn
+  degrees: 180
+- type: return_to_start
+  restore_heading: true

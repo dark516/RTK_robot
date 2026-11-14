@@ -1,0 +1,41 @@
+base_driver:
+  baudrate: 115200
+  cmd_vel_topic: /cmd_vel
+  control_rate_hz: 50.0
+  command_timeout_sec: 0.5
+  feedback_timeout_sec: 0.35
+  max_wheel_speed_mps: 0.35
+  hold_position_on_zero_cmd: true
+  stale_brake_hold_sec: 0.35
+  max_accel_x_mps2: 0.8
+  max_decel_x_mps2: 1.2
+  max_accel_y_mps2: 0.6
+  max_decel_y_mps2: 0.9
+  max_accel_z_radps2: 2.0
+  max_decel_z_radps2: 3.0
+  max_jerk_x_mps3: 4.0
+  max_jerk_y_mps3: 3.0
+  max_jerk_z_radps3: 8.0
+
+wheel_odometry:
+  encoder_topic: /wheel/encoders
+  odometry_topic: /wheel/odometry
+  odom_frame_id: odom
+  base_frame_id: base_link
+  max_sample_gap_sec: 0.5
+  max_plausible_wheel_speed_mps: 1.5
+  pose_covariance_diagonal:
+  - 0.03
+  - 0.08
+  - 999.0
+  - 999.0
+  - 999.0
+  - 0.15
+  twist_covariance_diagonal:
+  - 0.02
+  - 0.06
+  - 999.0
+  - 999.0
+  - 999.0
+  - 0.12
+

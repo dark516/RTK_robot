@@ -1,0 +1,13 @@
+bool enabled
+float32 brightness
+string effect
+float32 effect_speed_hz
+uint8 red
+uint8 green
+uint8 blue
+uint8 secondary_red
+uint8 secondary_green
+uint8 secondary_blue
+---
+bool success
+string message

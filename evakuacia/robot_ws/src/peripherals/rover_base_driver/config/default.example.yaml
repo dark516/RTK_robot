@@ -1,0 +1,30 @@
+base_driver_node:
+  ros__parameters:
+    serial_device: /tmp/rover_devices/motor_controller
+    baudrate: 115200
+    cmd_vel_topic: /cmd_vel
+    wheelbase_m: 0.135
+    track_width_m: 0.195
+    wheel_radius_m: 0.03
+    encoder_lines: 11.0
+    reduction_ratio: 45.0
+    quadrature_factor: 4.0
+    motor_command_order: [0, 1, 2, 3]
+    motor_command_signs: [1, -1, -1, 1]
+    encoder_feedback_order: [0, 1, 2, 3]
+    encoder_feedback_signs: [1, -1, -1, 1]
+    control_rate_hz: 50.0
+    command_timeout_sec: 0.5
+    feedback_timeout_sec: 0.35
+    max_wheel_speed_mps: 0.35
+    hold_position_on_zero_cmd: true
+    stale_brake_hold_sec: 0.35
+    max_accel_x_mps2: 0.8
+    max_decel_x_mps2: 1.2
+    max_accel_y_mps2: 0.6
+    max_decel_y_mps2: 0.9
+    max_accel_z_radps2: 2.0
+    max_decel_z_radps2: 3.0
+    max_jerk_x_mps3: 4.0
+    max_jerk_y_mps3: 3.0
+    max_jerk_z_radps3: 8.0

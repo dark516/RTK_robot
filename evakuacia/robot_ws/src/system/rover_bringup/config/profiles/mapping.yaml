@@ -1,0 +1,24 @@
+profile:
+  name: mapping
+  description: Hardware profile used with SLAM Toolbox.
+
+components:
+  base: true
+  odometry: true
+  description: true
+  localization: true
+  imu: true
+  lidar: true
+  camera: false
+  vision: false
+  led_strip: false
+  octoliner: false
+  waveshare_audio: false
+  web: true
+  display: false
+  rosboard: false
+  agent: false
+  fleet_bridge: false
+  twist_mux: false
+  nav2: false
+  slam: true

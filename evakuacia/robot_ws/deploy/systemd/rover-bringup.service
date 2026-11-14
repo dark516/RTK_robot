@@ -1,0 +1,19 @@
+[Unit]
+Description=SVERK Rover ROS 2 bringup
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/sverk_rover
+EnvironmentFile=-/etc/default/rover-bringup
+ExecStart=/bin/bash -lc 'set -e; ROVER_WS="${ROVER_WS:-/home/pi/sverk_rover}"; cd "$ROVER_WS"; source /opt/ros/jazzy/setup.bash; source "$ROVER_WS/install/setup.bash"; exec ros2 launch rover_bringup robot.launch.py profile:="${ROVER_PROFILE:-full}" discovery_mode:="${ROVER_DISCOVERY_MODE:-configured}" ${ROVER_LAUNCH_ARGS:-}'
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGINT
+TimeoutStopSec=20
+
+[Install]
+WantedBy=multi-user.target

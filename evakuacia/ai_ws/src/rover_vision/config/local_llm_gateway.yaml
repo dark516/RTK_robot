@@ -1,0 +1,19 @@
+local_llm_gateway_node:
+  ros__parameters:
+    llama_server: ~/.local/bin/llama-server
+    models_dir: ~/.local/share/rtk-evacuation/models/llm
+    api_key_file: ~/.config/sverk-rover/local_llm_api_key
+    https_bind: 0.0.0.0
+    https_port: 8082
+    http_api_bind: 0.0.0.0
+    http_api_port: 8083
+    backend_host: 127.0.0.1
+    backend_port: 8092
+    device: Vulkan0
+    context_size: 8192
+    threads: 8
+    startup_timeout_s: 360.0
+    default_model: qwen3.5-9b
+    autostart: true
+    certfile: ~/.cache/rover-vlm/cert.pem
+    keyfile: ~/.cache/rover-vlm/key.pem

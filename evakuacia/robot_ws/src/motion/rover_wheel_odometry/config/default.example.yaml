@@ -1,0 +1,19 @@
+wheel_odometry_node:
+  ros__parameters:
+    encoder_topic: /wheel/encoders
+    odometry_topic: /wheel/odometry
+    odom_frame_id: odom
+    base_frame_id: base_link
+    wheel_radius_m: 0.03
+    wheelbase_m: 0.135
+    track_width_m: 0.195
+    encoder_lines: 11.0
+    reduction_ratio: 45.0
+    quadrature_factor: 4.0
+    x_multiplier: 1.0
+    y_multiplier: 1.0
+    yaw_multiplier: 1.0
+    max_sample_gap_sec: 0.5
+    max_plausible_wheel_speed_mps: 1.5
+    pose_covariance_diagonal: [0.03, 0.08, 999.0, 999.0, 999.0, 0.15]
+    twist_covariance_diagonal: [0.02, 0.06, 999.0, 999.0, 999.0, 0.12]

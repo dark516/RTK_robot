@@ -1,0 +1,5 @@
+lidar_filter:
+  padding_m: 0.025
+  use_tf: true
+  tf_timeout_sec: 0.05
+  warn_interval_sec: 5.0

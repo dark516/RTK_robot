@@ -1,0 +1,17 @@
+lidar:
+  model: sllidar_c1
+  channel_type: serial
+  serial_port: /tmp/rover_devices/lidar
+  serial_baudrate: 460800
+  probe_baudrates:
+  - 460800
+  - 115200
+  - 256000
+  - 1000000
+  frame_id: lidar_link
+  inverted: false
+  angle_compensate: true
+  scan_mode: Standard
+  scan_frequency: 10.0
+  range_min: 0.17
+

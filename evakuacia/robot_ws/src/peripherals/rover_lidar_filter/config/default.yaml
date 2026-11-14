@@ -1,0 +1,16 @@
+lidar_footprint_filter:
+  ros__parameters:
+    input_topic: /scan
+    output_topic: /scan_filtered
+    base_frame_id: base_link
+    footprint_min_x_m: -0.0878
+    footprint_max_x_m: 0.1128
+    footprint_min_y_m: -0.0995
+    footprint_max_y_m: 0.0995
+    padding_m: 0.025
+    use_tf: true
+    tf_timeout_sec: 0.05
+    fallback_sensor_x_m: 0.0662
+    fallback_sensor_y_m: 0.0
+    fallback_sensor_yaw_rad: 3.141592653589793
+    warn_interval_sec: 5.0

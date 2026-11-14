@@ -1,0 +1,21 @@
+[Unit]
+Description=SVERK Rover path-clearance detector and annotated stream
+After=network-online.target rover-bringup.service
+Wants=network-online.target rover-bringup.service
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/sverk_rover
+Environment=ROS_DOMAIN_ID=77
+Environment=RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+Environment=PYTHONNOUSERSITE=1
+ExecStart=/bin/bash --noprofile --norc -c 'source /opt/ros/jazzy/setup.bash; source /home/pi/sverk_rover/install/setup.bash; exec ros2 run rover_vision path_clearance_node --ros-args --params-file /home/pi/sverk_rover/install/rover_vision/share/rover_vision/config/path_clearance.yaml'
+Restart=on-failure
+RestartSec=3
+KillSignal=SIGINT
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

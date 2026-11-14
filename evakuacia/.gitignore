@@ -1,0 +1,30 @@
+# ROS 2 / colcon output
+build/
+install/
+log/
+
+# Python caches and local test state
+**/__pycache__/
+**/.pytest_cache/
+*.py[cod]
+
+# Local models and inference runtimes
+models/
+*.gguf
+*.onnx
+*.engine
+*.hef
+llama.cpp/
+
+# Calibration and run-time state
+*.npz
+calibration/
+runtime/
+logs/
+
+# Credentials and local TLS material
+.env
+*.key
+*.pem
+*api_key*
+!docs/API_KEYS.md

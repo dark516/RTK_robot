@@ -1,0 +1,17 @@
+octoliner_node:
+  ros__parameters:
+    i2c_address: 42
+    i2c_bus: 1
+    poll_rate_hz: 50.0
+    frame_id: octoliner_link
+    reading_topic: /octoliner/reading
+    analog_topic: /octoliner/analog
+    pattern_topic: /octoliner/pattern
+    line_position_topic: /octoliner/line_position
+    tracked_line_topic: /octoliner/tracked_line_position
+    line_visible_topic: /octoliner/line_visible
+    sensitivity_topic: /octoliner/sensitivity
+    set_sensitivity_service: /octoliner/set_sensitivity
+    optimize_on_black_service: /octoliner/optimize_on_black
+    sensitivity: 0.8
+    auto_optimize_on_start: false

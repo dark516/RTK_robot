@@ -1,0 +1,23 @@
+rover_status_display_node:
+  ros__parameters:
+    display_env: :0
+    xauthority_path: ~/.Xauthority
+    window_title: Rover Display
+    full_screen: true
+    refresh_sec: 1.0
+    background_color: '#07141C'
+    panel_color: '#0C202B'
+    accent_color: '#16B8F3'
+    text_color: '#F4FBFF'
+    muted_text_color: '#8CB5C7'
+    wifi_interface: wlan0
+    wifi_config_script: /usr/local/sbin/rover-wifi-config.py
+    wifi_netplan_file: /etc/netplan/50-cloud-init.yaml
+    robot_name_prefix: sverk_rover
+    robot_serial: '1'
+    right_panel_mode: placeholder
+    odom_topic: /odom
+    agent_text_topic: /agent/text
+    battery_topic: /battery/state
+    console_shell: /bin/bash
+
