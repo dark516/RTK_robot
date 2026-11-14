@@ -1,0 +1,10 @@
+build/
+install/
+log/
+bags/
+calibration/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/

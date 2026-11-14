@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090e11">
+  <title>Frob City — калибровка поля</title>
+  <link rel="stylesheet" href="/assets/calibration.css">
+  <script src="/assets/calibration.js" defer></script>
+</head>
+<body>
+  <div class="survey-grid" aria-hidden="true"></div>
+  <div id="connection-banner" class="connection-banner" role="status">НЕТ СВЯЗИ С WEB NODE — ЛОКАЛЬНЫЕ ИЗМЕНЕНИЯ СОХРАНЕНЫ В БРАУЗЕРЕ</div>
+
+  <header class="cal-topbar">
+    <a class="back-link" href="/" aria-label="Вернуться в центр управления">← <span>CONTROL</span></a>
+    <div class="cal-brand">
+      <span class="brand-index">05×05</span>
+      <div><p>FIELD SURVEY / CONFIGURATION</p><h1>Калибровка поля</h1></div>
+    </div>
+    <div class="source-cluster">
+      <label for="map-picker">ИСТОЧНИК КАРТЫ</label>
+      <div class="source-row"><span id="source-badge" class="source-badge none">NO MAP</span><select id="map-picker" aria-label="Выбрать карту"><option value="">Загрузка карт…</option></select></div>
+      <small id="source-detail">Ожидание каталога</small>
+    </div>
+    <div class="draft-cluster">
+      <label for="draft-picker">ЧЕРНОВИК</label>
+      <select id="draft-picker" aria-label="Выбрать черновик"><option value="">Новый черновик</option></select>
+      <input id="draft-name" type="text" maxlength="80" value="Калибровка поля" aria-label="Название черновика">
+    </div>
+    <div class="top-actions">
+      <button id="new-draft" class="button ghost" type="button">НОВЫЙ</button>
+      <button id="save-draft" class="button cyan" type="button" disabled>СОХРАНИТЬ</button>
+      <button id="validate-draft" class="button amber" type="button" disabled>ПРОВЕРИТЬ</button>
+      <button id="activate-draft" class="button danger" type="button" disabled>АКТИВИРОВАТЬ</button>
+    </div>
+  </header>
+
+  <main class="cal-shell" data-grid-size="5">
+    <aside class="tool-rail" aria-label="Инструменты редактора">
+      <p class="rail-label">TOOLS</p>
+      <button class="rail-tool" data-tool="pan" type="button" title="Перемещать карту"><b>H</b><span>Обзор</span></button>
+      <button class="rail-tool active" data-tool="global" type="button" title="Перемещать и вращать сетку"><b>G</b><span>Сетка</span></button>
+      <button class="rail-tool" data-tool="local" type="button" title="Править отдельные точки"><b>L</b><span>Локально</span></button>
+      <button class="rail-tool" data-tool="measure" type="button" title="Измерять расстояние"><b>M</b><span>Мера</span></button>
+      <hr>
+      <button id="fit-map" class="rail-tool" type="button"><b>F</b><span>Вписать</span></button>
+      <button id="undo-edit" class="rail-tool" type="button" disabled><b>↶</b><span>Назад</span></button>
+      <button id="redo-edit" class="rail-tool" type="button" disabled><b>↷</b><span>Вперёд</span></button>
+    </aside>
+
+    <section class="map-workbench" aria-labelledby="workbench-title">
+      <div class="workbench-head">
+        <div><p>MAP / FIELD REGISTRATION</p><h2 id="workbench-title">Совмещение координат</h2></div>
+        <div class="orientation" aria-label="Быстрый поворот сетки">
+          <span>ОРИЕНТАЦИЯ</span>
+          <button type="button" data-yaw="0">0°</button>
+          <button type="button" data-yaw="90">90°</button>
+          <button type="button" data-yaw="180">180°</button>
+          <button type="button" data-yaw="270">270°</button>
+        </div>
+      </div>
+      <div class="canvas-stage">
+        <canvas id="calibration-canvas" aria-label="Карта Nav2 с калибровочной сеткой 5 на 5"></canvas>
+        <div id="canvas-empty" class="canvas-empty">
+          <div class="target-glyph" aria-hidden="true"><i></i><i></i></div>
+          <strong>ВЫБЕРИТЕ КАРТУ</strong>
+          <span>Если `/map` не публикуется, выберите YAML-карту робота в верхней панели.</span>
+        </div>
+        <div class="canvas-hud top-left"><span id="tool-readout">GLOBAL FIT</span><b>5×5 / 4.00 m</b></div>
+        <div class="canvas-hud bottom-left"><span id="cursor-coordinates">X — / Y —</span><b id="map-scale">—</b></div>
+        <div class="canvas-hud bottom-right"><span>СРЕДНЯЯ ПОПРАВКА</span><b id="residual-readout">0.000 m</b></div>
+      </div>
+    </section>
+
+    <aside id="calibration-inspector" class="inspector" aria-label="Инспектор калибровки">
+      <div class="inspector-head"><div><p>PRECISION INPUT</p><h2 id="inspector-title">Глобальная сетка</h2></div><span id="draft-state" class="draft-state">НЕ СОЗДАН</span></div>
+      <div id="inspector-content" class="inspector-content">
+        <div class="empty-inspector">Создайте черновик, чтобы редактировать геометрию.</div>
+      </div>
+    </aside>
+
+    <section class="lower-deck">
+      <nav id="calibration-tabs" class="tabs" aria-label="Разделы калибровки">
+        <button class="active" type="button" data-tab="field">Поле</button>
+        <button type="button" data-tab="robot_safety">Робот и безопасность</button>
+        <button type="button" data-tab="camera_signs">Камера и знаки</button>
+        <button type="button" data-tab="localization">Локализация</button>
+        <button type="button" data-tab="mission">Миссия</button>
+        <button type="button" data-tab="ros_nav2">ROS / Nav2</button>
+        <button type="button" data-tab="readiness">Готовность</button>
+      </nav>
+      <div class="deck-content">
+        <section class="layers-panel" aria-labelledby="layers-title">
+          <div class="section-title"><span>01</span><div><p>OVERLAY CONTROL</p><h3 id="layers-title">Слои</h3></div></div>
+          <div id="layer-controls" class="layer-controls">
+            <label><input type="checkbox" data-layer="grid" checked><i class="swatch grid"></i> Сетка и клетки</label>
+            <label><input type="checkbox" data-layer="navigation" checked><i class="swatch navigation"></i> Точки движения</label>
+            <label><input type="checkbox" data-layer="roads" checked><i class="swatch roads"></i> Дорожные связи</label>
+            <label><input type="checkbox" data-layer="platforms" checked><i class="swatch platforms"></i> Платформы</label>
+            <label><input type="checkbox" data-layer="observations" checked><i class="swatch observations"></i> Точки обзора</label>
+            <label><input type="checkbox" data-layer="signs" checked><i class="swatch signs"></i> Места знаков</label>
+            <label><input type="checkbox" data-layer="residuals" checked><i class="swatch residuals"></i> Векторы поправок</label>
+          </div>
+        </section>
+        <section class="tab-panel" aria-labelledby="tab-title">
+          <div class="section-title"><span>02</span><div><p>CALIBRATION REGISTER</p><h3 id="tab-title">Поле</h3></div></div>
+          <div id="tab-content" class="tab-content"></div>
+        </section>
+        <section class="validation-panel" aria-labelledby="validation-title">
+          <div class="section-title"><span>03</span><div><p>VALIDATION / READINESS</p><h3 id="validation-title">Проверка</h3></div><span id="validation-summary" class="validation-summary">НЕ ЗАПУЩЕНА</span></div>
+          <div id="validation-list" class="validation-list"><p>Сохраните и проверьте черновик. Геометрические ошибки и физические блокеры будут показаны отдельно.</p></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast-stack" class="toast-stack" aria-live="polite"></div>
+</body>
+</html>

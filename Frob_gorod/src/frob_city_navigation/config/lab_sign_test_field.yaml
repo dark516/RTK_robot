@@ -1,0 +1,73 @@
+# Stationary integration fixture for the calibrated laboratory overlay.
+# It exposes the two physical mounting points along B2's west edge.  Runtime
+# association must use robot pose + image bearing + optical depth to decide
+# whether the sign is at the beginning (south) or end (north) of the platform.
+schema_version: 2
+frame_id: map
+field_size_m: [4.0, 4.0]
+geometry_calibrated: true
+field_to_map:
+  x_m: -0.37019447158207663
+  y_m: 0.4171449951152273
+  yaw_rad: -1.5707963267948966
+  valid: true
+footprint:
+  - [-0.15, -0.15]
+  - [0.15, -0.15]
+  - [0.15, 0.15]
+  - [-0.15, 0.15]
+drivable_regions:
+  - id: ROAD_A2
+    polygon:
+      - [0.0, 0.8]
+      - [0.8, 0.8]
+      - [0.8, 1.6]
+      - [0.0, 1.6]
+platforms:
+  - id: PLATFORM_B2
+    polygon:
+      - [0.8, 0.8]
+      - [1.6, 0.8]
+      - [1.6, 1.6]
+      - [0.8, 1.6]
+anchors:
+  - id: ANCHOR_A2_OBSERVE
+    cell_id: C0_1
+    pose: {x_m: 0.4, y_m: 1.2, yaw_rad: 0.0}
+  - id: ANCHOR_B2_APPROACH
+    cell_id: C1_1
+    pose: {x_m: 0.75, y_m: 1.2, yaw_rad: 0.0}
+gates: []
+edges:
+  - id: LAB_B2_FROM_WEST
+    from_anchor_id: ANCHOR_A2_OBSERVE
+    to_anchor_id: ANCHOR_B2_APPROACH
+    movement: STRAIGHT
+    path:
+      - {x_m: 0.4, y_m: 1.2, yaw_rad: 0.0}
+      - {x_m: 0.75, y_m: 1.2, yaw_rad: 0.0}
+    permitted_region_ids: [ROAD_A2]
+    approach_id: C1_1/FROM_WEST
+observation_regions:
+  - id: OBS_B2_FROM_A2
+    polygon:
+      - [0.30, 1.10]
+      - [0.50, 1.10]
+      - [0.50, 1.30]
+      - [0.30, 1.30]
+    anchor_id: ANCHOR_A2_OBSERVE
+    nominal_heading_rad: 0.0
+    heading_tolerance_rad: 0.35
+sign_sites:
+  - id: SIGN_B2_SW
+    position: [0.86, 0.86]
+    faces:
+      - id: FACE_W
+        yaw_rad: 3.141592653589793
+        controlled_approach_id: C1_1/FROM_WEST
+  - id: SIGN_B2_NW
+    position: [0.86, 1.54]
+    faces:
+      - id: FACE_W
+        yaw_rad: 3.141592653589793
+        controlled_approach_id: C1_1/FROM_WEST

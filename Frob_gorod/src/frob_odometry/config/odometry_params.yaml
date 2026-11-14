@@ -1,11 +1,13 @@
 encoder_odometry:
   ros__parameters:
     # Параметры энкодеров
-    meters_per_tick: 0.00057    # м/тик
+    meters_per_tick: 0.00047304 # м/тик = pi * 0.067 м / 445 тиков
     wheel_base: 0.18            # м
     
     # Настройки публикации
-    publish_tf: true           # публиковать TF-трансформации
+    # TF odom -> base_footprint publishes only robot_localization.
+    # Two publishers for the same transform make Nav2 alternate between poses.
+    publish_tf: false
     odom_frame_id: "odom"      # имя фрейма одометрии
     base_frame_id: "base_footprint" # имя базового фрейма
     

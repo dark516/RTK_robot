@@ -1,0 +1,1603 @@
+schema_version: 2
+frame_id: map
+field_size_m:
+- 4.0
+- 4.0
+geometry_calibrated: true
+field_to_map:
+  x_m: -3.4476761874135264
+  y_m: -1.9417943365721693
+  yaw_rad: 0.27690944604631196
+  valid: true
+footprint:
+- - -0.15
+  - -0.15
+- - 0.15
+  - -0.15
+- - 0.15
+  - 0.15
+- - -0.15
+  - 0.15
+drivable_regions:
+- id: REGION_C0_0
+  polygon:
+  - - 0.0
+    - 0.0
+  - - 0.8
+    - 0.0
+  - - 0.8
+    - 0.8
+  - - 0.0
+    - 0.8
+- id: REGION_C1_0
+  polygon:
+  - - 0.8
+    - 0.0
+  - - 1.6
+    - 0.0
+  - - 1.6
+    - 0.8
+  - - 0.8
+    - 0.8
+- id: REGION_C2_0
+  polygon:
+  - - 1.6
+    - 0.0
+  - - 2.4
+    - 0.0
+  - - 2.4
+    - 0.8
+  - - 1.6
+    - 0.8
+- id: REGION_C3_0
+  polygon:
+  - - 2.4
+    - 0.0
+  - - 3.2
+    - 0.0
+  - - 3.2
+    - 0.8
+  - - 2.4
+    - 0.8
+- id: REGION_C4_0
+  polygon:
+  - - 3.2
+    - 0.0
+  - - 4.0
+    - 0.0
+  - - 4.0
+    - 0.8
+  - - 3.2
+    - 0.8
+- id: REGION_C0_1
+  polygon:
+  - - 0.0
+    - 0.8
+  - - 0.8
+    - 0.8
+  - - 0.8
+    - 1.6
+  - - 0.0
+    - 1.6
+- id: REGION_C2_1
+  polygon:
+  - - 1.6
+    - 0.8
+  - - 2.4
+    - 0.8
+  - - 2.4
+    - 1.6
+  - - 1.6
+    - 1.6
+- id: REGION_C4_1
+  polygon:
+  - - 3.2
+    - 0.8
+  - - 4.0
+    - 0.8
+  - - 4.0
+    - 1.6
+  - - 3.2
+    - 1.6
+- id: REGION_C0_2
+  polygon:
+  - - 0.0
+    - 1.6
+  - - 0.8
+    - 1.6
+  - - 0.8
+    - 2.4
+  - - 0.0
+    - 2.4
+- id: REGION_C1_2
+  polygon:
+  - - 0.8
+    - 1.6
+  - - 1.6
+    - 1.6
+  - - 1.6
+    - 2.4
+  - - 0.8
+    - 2.4
+- id: REGION_C2_2
+  polygon:
+  - - 1.6
+    - 1.6
+  - - 2.4
+    - 1.6
+  - - 2.4
+    - 2.4
+  - - 1.6
+    - 2.4
+- id: REGION_C3_2
+  polygon:
+  - - 2.4
+    - 1.6
+  - - 3.2
+    - 1.6
+  - - 3.2
+    - 2.4
+  - - 2.4
+    - 2.4
+- id: REGION_C4_2
+  polygon:
+  - - 3.2
+    - 1.6
+  - - 4.0
+    - 1.6
+  - - 4.0
+    - 2.4
+  - - 3.2
+    - 2.4
+- id: REGION_C0_3
+  polygon:
+  - - 0.0
+    - 2.4
+  - - 0.8
+    - 2.4
+  - - 0.8
+    - 3.2
+  - - 0.0
+    - 3.2
+- id: REGION_C2_3
+  polygon:
+  - - 1.6
+    - 2.4
+  - - 2.4
+    - 2.4
+  - - 2.4
+    - 3.2
+  - - 1.6
+    - 3.2
+- id: REGION_C4_3
+  polygon:
+  - - 3.2
+    - 2.4
+  - - 4.0
+    - 2.4
+  - - 4.0
+    - 3.2
+  - - 3.2
+    - 3.2
+- id: REGION_C0_4
+  polygon:
+  - - 0.0
+    - 3.2
+  - - 0.8
+    - 3.2
+  - - 0.8
+    - 4.0
+  - - 0.0
+    - 4.0
+- id: REGION_C1_4
+  polygon:
+  - - 0.8
+    - 3.2
+  - - 1.6
+    - 3.2
+  - - 1.6
+    - 4.0
+  - - 0.8
+    - 4.0
+- id: REGION_C2_4
+  polygon:
+  - - 1.6
+    - 3.2
+  - - 2.4
+    - 3.2
+  - - 2.4
+    - 4.0
+  - - 1.6
+    - 4.0
+- id: REGION_C3_4
+  polygon:
+  - - 2.4
+    - 3.2
+  - - 3.2
+    - 3.2
+  - - 3.2
+    - 4.0
+  - - 2.4
+    - 4.0
+- id: REGION_C4_4
+  polygon:
+  - - 3.2
+    - 3.2
+  - - 4.0
+    - 3.2
+  - - 4.0
+    - 4.0
+  - - 3.2
+    - 4.0
+platforms:
+- id: PLATFORM_B2
+  polygon:
+  - - 0.8
+    - 0.8
+  - - 1.6
+    - 0.8
+  - - 1.6
+    - 1.6
+  - - 0.8
+    - 1.6
+- id: PLATFORM_D2
+  polygon:
+  - - 2.4
+    - 0.8
+  - - 3.2
+    - 0.8
+  - - 3.2
+    - 1.6
+  - - 2.4
+    - 1.6
+- id: PLATFORM_B4
+  polygon:
+  - - 0.8
+    - 2.4
+  - - 1.6
+    - 2.4
+  - - 1.6
+    - 3.2
+  - - 0.8
+    - 3.2
+- id: PLATFORM_D4
+  polygon:
+  - - 2.4
+    - 2.4
+  - - 3.2
+    - 2.4
+  - - 3.2
+    - 3.2
+  - - 2.4
+    - 3.2
+anchors:
+- id: ANCHOR_C0_0
+  cell_id: C0_0
+  pose:
+    x_m: 0.4
+    y_m: 0.4
+    yaw_rad: 0.0
+- id: ANCHOR_C1_0
+  cell_id: C1_0
+  pose:
+    x_m: 1.2
+    y_m: 0.4
+    yaw_rad: 0.0
+- id: ANCHOR_C2_0
+  cell_id: C2_0
+  pose:
+    x_m: 2.0
+    y_m: 0.4
+    yaw_rad: 0.0
+- id: ANCHOR_C3_0
+  cell_id: C3_0
+  pose:
+    x_m: 2.8
+    y_m: 0.4
+    yaw_rad: 0.0
+- id: ANCHOR_C4_0
+  cell_id: C4_0
+  pose:
+    x_m: 3.6
+    y_m: 0.4
+    yaw_rad: 0.0
+- id: ANCHOR_C0_1
+  cell_id: C0_1
+  pose:
+    x_m: 0.4
+    y_m: 1.2
+    yaw_rad: 0.0
+- id: ANCHOR_C2_1
+  cell_id: C2_1
+  pose:
+    x_m: 2.0
+    y_m: 1.2
+    yaw_rad: 0.0
+- id: ANCHOR_C4_1
+  cell_id: C4_1
+  pose:
+    x_m: 3.6
+    y_m: 1.2
+    yaw_rad: 0.0
+- id: ANCHOR_C0_2
+  cell_id: C0_2
+  pose:
+    x_m: 0.4
+    y_m: 2.0
+    yaw_rad: 0.0
+- id: ANCHOR_C1_2
+  cell_id: C1_2
+  pose:
+    x_m: 1.2
+    y_m: 2.0
+    yaw_rad: 0.0
+- id: ANCHOR_C2_2
+  cell_id: C2_2
+  pose:
+    x_m: 2.0
+    y_m: 2.0
+    yaw_rad: 0.0
+- id: ANCHOR_C3_2
+  cell_id: C3_2
+  pose:
+    x_m: 2.8
+    y_m: 2.0
+    yaw_rad: 0.0
+- id: ANCHOR_C4_2
+  cell_id: C4_2
+  pose:
+    x_m: 3.6
+    y_m: 2.0
+    yaw_rad: 0.0
+- id: ANCHOR_C0_3
+  cell_id: C0_3
+  pose:
+    x_m: 0.4
+    y_m: 2.8
+    yaw_rad: 0.0
+- id: ANCHOR_C2_3
+  cell_id: C2_3
+  pose:
+    x_m: 2.0
+    y_m: 2.8
+    yaw_rad: 0.0
+- id: ANCHOR_C4_3
+  cell_id: C4_3
+  pose:
+    x_m: 3.6
+    y_m: 2.8
+    yaw_rad: 0.0
+- id: ANCHOR_C0_4
+  cell_id: C0_4
+  pose:
+    x_m: 0.4
+    y_m: 3.6
+    yaw_rad: 0.0
+- id: ANCHOR_C1_4
+  cell_id: C1_4
+  pose:
+    x_m: 1.2
+    y_m: 3.6
+    yaw_rad: 0.0
+- id: ANCHOR_C2_4
+  cell_id: C2_4
+  pose:
+    x_m: 2.0
+    y_m: 3.6
+    yaw_rad: 0.0
+- id: ANCHOR_C3_4
+  cell_id: C3_4
+  pose:
+    x_m: 2.8
+    y_m: 3.6
+    yaw_rad: 0.0
+- id: ANCHOR_C4_4
+  cell_id: C4_4
+  pose:
+    x_m: 3.6
+    y_m: 3.6
+    yaw_rad: 0.0
+edges:
+- id: C0_0->C1_0
+  from_anchor_id: ANCHOR_C0_0
+  to_anchor_id: ANCHOR_C1_0
+  movement: STRAIGHT
+  path:
+  - x_m: 0.4
+    y_m: 0.4
+    yaw_rad: 0.0
+  - x_m: 1.2
+    y_m: 0.4
+    yaw_rad: 0.0
+  permitted_region_ids:
+  - REGION_C0_0
+  - REGION_C1_0
+  approach_id: C1_0/FROM_WEST
+- id: C1_0->C0_0
+  from_anchor_id: ANCHOR_C1_0
+  to_anchor_id: ANCHOR_C0_0
+  movement: STRAIGHT
+  path:
+  - x_m: 1.2
+    y_m: 0.4
+    yaw_rad: 3.141592653589793
+  - x_m: 0.4
+    y_m: 0.4
+    yaw_rad: 3.141592653589793
+  permitted_region_ids:
+  - REGION_C1_0
+  - REGION_C0_0
+  approach_id: C0_0/FROM_EAST
+- id: C0_0->C0_1
+  from_anchor_id: ANCHOR_C0_0
+  to_anchor_id: ANCHOR_C0_1
+  movement: STRAIGHT
+  path:
+  - x_m: 0.4
+    y_m: 0.4
+    yaw_rad: 1.5707963267948966
+  - x_m: 0.4
+    y_m: 1.2
+    yaw_rad: 1.5707963267948966
+  permitted_region_ids:
+  - REGION_C0_0
+  - REGION_C0_1
+  approach_id: C0_1/FROM_SOUTH
+- id: C0_1->C0_0
+  from_anchor_id: ANCHOR_C0_1
+  to_anchor_id: ANCHOR_C0_0
+  movement: STRAIGHT
+  path:
+  - x_m: 0.4
+    y_m: 1.2
+    yaw_rad: -1.5707963267948966
+  - x_m: 0.4
+    y_m: 0.4
+    yaw_rad: -1.5707963267948966
+  permitted_region_ids:
+  - REGION_C0_1
+  - REGION_C0_0
+  approach_id: C0_0/FROM_NORTH
+- id: C1_0->C2_0
+  from_anchor_id: ANCHOR_C1_0
+  to_anchor_id: ANCHOR_C2_0
+  movement: STRAIGHT
+  path:
+  - x_m: 1.2
+    y_m: 0.4
+    yaw_rad: 0.0
+  - x_m: 2.0
+    y_m: 0.4
+    yaw_rad: 0.0
+  permitted_region_ids:
+  - REGION_C1_0
+  - REGION_C2_0
+  approach_id: C2_0/FROM_WEST
+- id: C2_0->C1_0
+  from_anchor_id: ANCHOR_C2_0
+  to_anchor_id: ANCHOR_C1_0
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 0.4
+    yaw_rad: 3.141592653589793
+  - x_m: 1.2
+    y_m: 0.4
+    yaw_rad: 3.141592653589793
+  permitted_region_ids:
+  - REGION_C2_0
+  - REGION_C1_0
+  approach_id: C1_0/FROM_EAST
+- id: C2_0->C3_0
+  from_anchor_id: ANCHOR_C2_0
+  to_anchor_id: ANCHOR_C3_0
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 0.4
+    yaw_rad: 0.0
+  - x_m: 2.8
+    y_m: 0.4
+    yaw_rad: 0.0
+  permitted_region_ids:
+  - REGION_C2_0
+  - REGION_C3_0
+  approach_id: C3_0/FROM_WEST
+- id: C3_0->C2_0
+  from_anchor_id: ANCHOR_C3_0
+  to_anchor_id: ANCHOR_C2_0
+  movement: STRAIGHT
+  path:
+  - x_m: 2.8
+    y_m: 0.4
+    yaw_rad: 3.141592653589793
+  - x_m: 2.0
+    y_m: 0.4
+    yaw_rad: 3.141592653589793
+  permitted_region_ids:
+  - REGION_C3_0
+  - REGION_C2_0
+  approach_id: C2_0/FROM_EAST
+- id: C2_0->C2_1
+  from_anchor_id: ANCHOR_C2_0
+  to_anchor_id: ANCHOR_C2_1
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 0.4
+    yaw_rad: 1.5707963267948966
+  - x_m: 2.0
+    y_m: 1.2
+    yaw_rad: 1.5707963267948966
+  permitted_region_ids:
+  - REGION_C2_0
+  - REGION_C2_1
+  approach_id: C2_1/FROM_SOUTH
+- id: C2_1->C2_0
+  from_anchor_id: ANCHOR_C2_1
+  to_anchor_id: ANCHOR_C2_0
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 1.2
+    yaw_rad: -1.5707963267948966
+  - x_m: 2.0
+    y_m: 0.4
+    yaw_rad: -1.5707963267948966
+  permitted_region_ids:
+  - REGION_C2_1
+  - REGION_C2_0
+  approach_id: C2_0/FROM_NORTH
+- id: C3_0->C4_0
+  from_anchor_id: ANCHOR_C3_0
+  to_anchor_id: ANCHOR_C4_0
+  movement: STRAIGHT
+  path:
+  - x_m: 2.8
+    y_m: 0.4
+    yaw_rad: 0.0
+  - x_m: 3.6
+    y_m: 0.4
+    yaw_rad: 0.0
+  permitted_region_ids:
+  - REGION_C3_0
+  - REGION_C4_0
+  approach_id: C4_0/FROM_WEST
+- id: C4_0->C3_0
+  from_anchor_id: ANCHOR_C4_0
+  to_anchor_id: ANCHOR_C3_0
+  movement: STRAIGHT
+  path:
+  - x_m: 3.6
+    y_m: 0.4
+    yaw_rad: 3.141592653589793
+  - x_m: 2.8
+    y_m: 0.4
+    yaw_rad: 3.141592653589793
+  permitted_region_ids:
+  - REGION_C4_0
+  - REGION_C3_0
+  approach_id: C3_0/FROM_EAST
+- id: C4_0->C4_1
+  from_anchor_id: ANCHOR_C4_0
+  to_anchor_id: ANCHOR_C4_1
+  movement: STRAIGHT
+  path:
+  - x_m: 3.6
+    y_m: 0.4
+    yaw_rad: 1.5707963267948966
+  - x_m: 3.6
+    y_m: 1.2
+    yaw_rad: 1.5707963267948966
+  permitted_region_ids:
+  - REGION_C4_0
+  - REGION_C4_1
+  approach_id: C4_1/FROM_SOUTH
+- id: C4_1->C4_0
+  from_anchor_id: ANCHOR_C4_1
+  to_anchor_id: ANCHOR_C4_0
+  movement: STRAIGHT
+  path:
+  - x_m: 3.6
+    y_m: 1.2
+    yaw_rad: -1.5707963267948966
+  - x_m: 3.6
+    y_m: 0.4
+    yaw_rad: -1.5707963267948966
+  permitted_region_ids:
+  - REGION_C4_1
+  - REGION_C4_0
+  approach_id: C4_0/FROM_NORTH
+- id: C0_1->C0_2
+  from_anchor_id: ANCHOR_C0_1
+  to_anchor_id: ANCHOR_C0_2
+  movement: STRAIGHT
+  path:
+  - x_m: 0.4
+    y_m: 1.2
+    yaw_rad: 1.5707963267948966
+  - x_m: 0.4
+    y_m: 2.0
+    yaw_rad: 1.5707963267948966
+  permitted_region_ids:
+  - REGION_C0_1
+  - REGION_C0_2
+  approach_id: C0_2/FROM_SOUTH
+- id: C0_2->C0_1
+  from_anchor_id: ANCHOR_C0_2
+  to_anchor_id: ANCHOR_C0_1
+  movement: STRAIGHT
+  path:
+  - x_m: 0.4
+    y_m: 2.0
+    yaw_rad: -1.5707963267948966
+  - x_m: 0.4
+    y_m: 1.2
+    yaw_rad: -1.5707963267948966
+  permitted_region_ids:
+  - REGION_C0_2
+  - REGION_C0_1
+  approach_id: C0_1/FROM_NORTH
+- id: C2_1->C2_2
+  from_anchor_id: ANCHOR_C2_1
+  to_anchor_id: ANCHOR_C2_2
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 1.2
+    yaw_rad: 1.5707963267948966
+  - x_m: 2.0
+    y_m: 2.0
+    yaw_rad: 1.5707963267948966
+  permitted_region_ids:
+  - REGION_C2_1
+  - REGION_C2_2
+  approach_id: C2_2/FROM_SOUTH
+- id: C2_2->C2_1
+  from_anchor_id: ANCHOR_C2_2
+  to_anchor_id: ANCHOR_C2_1
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 2.0
+    yaw_rad: -1.5707963267948966
+  - x_m: 2.0
+    y_m: 1.2
+    yaw_rad: -1.5707963267948966
+  permitted_region_ids:
+  - REGION_C2_2
+  - REGION_C2_1
+  approach_id: C2_1/FROM_NORTH
+- id: C4_1->C4_2
+  from_anchor_id: ANCHOR_C4_1
+  to_anchor_id: ANCHOR_C4_2
+  movement: STRAIGHT
+  path:
+  - x_m: 3.6
+    y_m: 1.2
+    yaw_rad: 1.5707963267948966
+  - x_m: 3.6
+    y_m: 2.0
+    yaw_rad: 1.5707963267948966
+  permitted_region_ids:
+  - REGION_C4_1
+  - REGION_C4_2
+  approach_id: C4_2/FROM_SOUTH
+- id: C4_2->C4_1
+  from_anchor_id: ANCHOR_C4_2
+  to_anchor_id: ANCHOR_C4_1
+  movement: STRAIGHT
+  path:
+  - x_m: 3.6
+    y_m: 2.0
+    yaw_rad: -1.5707963267948966
+  - x_m: 3.6
+    y_m: 1.2
+    yaw_rad: -1.5707963267948966
+  permitted_region_ids:
+  - REGION_C4_2
+  - REGION_C4_1
+  approach_id: C4_1/FROM_NORTH
+- id: C0_2->C1_2
+  from_anchor_id: ANCHOR_C0_2
+  to_anchor_id: ANCHOR_C1_2
+  movement: STRAIGHT
+  path:
+  - x_m: 0.4
+    y_m: 2.0
+    yaw_rad: 0.0
+  - x_m: 1.2
+    y_m: 2.0
+    yaw_rad: 0.0
+  permitted_region_ids:
+  - REGION_C0_2
+  - REGION_C1_2
+  approach_id: C1_2/FROM_WEST
+- id: C1_2->C0_2
+  from_anchor_id: ANCHOR_C1_2
+  to_anchor_id: ANCHOR_C0_2
+  movement: STRAIGHT
+  path:
+  - x_m: 1.2
+    y_m: 2.0
+    yaw_rad: 3.141592653589793
+  - x_m: 0.4
+    y_m: 2.0
+    yaw_rad: 3.141592653589793
+  permitted_region_ids:
+  - REGION_C1_2
+  - REGION_C0_2
+  approach_id: C0_2/FROM_EAST
+- id: C0_2->C0_3
+  from_anchor_id: ANCHOR_C0_2
+  to_anchor_id: ANCHOR_C0_3
+  movement: STRAIGHT
+  path:
+  - x_m: 0.4
+    y_m: 2.0
+    yaw_rad: 1.5707963267948966
+  - x_m: 0.4
+    y_m: 2.8
+    yaw_rad: 1.5707963267948966
+  permitted_region_ids:
+  - REGION_C0_2
+  - REGION_C0_3
+  approach_id: C0_3/FROM_SOUTH
+- id: C0_3->C0_2
+  from_anchor_id: ANCHOR_C0_3
+  to_anchor_id: ANCHOR_C0_2
+  movement: STRAIGHT
+  path:
+  - x_m: 0.4
+    y_m: 2.8
+    yaw_rad: -1.5707963267948966
+  - x_m: 0.4
+    y_m: 2.0
+    yaw_rad: -1.5707963267948966
+  permitted_region_ids:
+  - REGION_C0_3
+  - REGION_C0_2
+  approach_id: C0_2/FROM_NORTH
+- id: C1_2->C2_2
+  from_anchor_id: ANCHOR_C1_2
+  to_anchor_id: ANCHOR_C2_2
+  movement: STRAIGHT
+  path:
+  - x_m: 1.2
+    y_m: 2.0
+    yaw_rad: 0.0
+  - x_m: 2.0
+    y_m: 2.0
+    yaw_rad: 0.0
+  permitted_region_ids:
+  - REGION_C1_2
+  - REGION_C2_2
+  approach_id: C2_2/FROM_WEST
+- id: C2_2->C1_2
+  from_anchor_id: ANCHOR_C2_2
+  to_anchor_id: ANCHOR_C1_2
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 2.0
+    yaw_rad: 3.141592653589793
+  - x_m: 1.2
+    y_m: 2.0
+    yaw_rad: 3.141592653589793
+  permitted_region_ids:
+  - REGION_C2_2
+  - REGION_C1_2
+  approach_id: C1_2/FROM_EAST
+- id: C2_2->C3_2
+  from_anchor_id: ANCHOR_C2_2
+  to_anchor_id: ANCHOR_C3_2
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 2.0
+    yaw_rad: 0.0
+  - x_m: 2.8
+    y_m: 2.0
+    yaw_rad: 0.0
+  permitted_region_ids:
+  - REGION_C2_2
+  - REGION_C3_2
+  approach_id: C3_2/FROM_WEST
+- id: C3_2->C2_2
+  from_anchor_id: ANCHOR_C3_2
+  to_anchor_id: ANCHOR_C2_2
+  movement: STRAIGHT
+  path:
+  - x_m: 2.8
+    y_m: 2.0
+    yaw_rad: 3.141592653589793
+  - x_m: 2.0
+    y_m: 2.0
+    yaw_rad: 3.141592653589793
+  permitted_region_ids:
+  - REGION_C3_2
+  - REGION_C2_2
+  approach_id: C2_2/FROM_EAST
+- id: C2_2->C2_3
+  from_anchor_id: ANCHOR_C2_2
+  to_anchor_id: ANCHOR_C2_3
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 2.0
+    yaw_rad: 1.5707963267948966
+  - x_m: 2.0
+    y_m: 2.8
+    yaw_rad: 1.5707963267948966
+  permitted_region_ids:
+  - REGION_C2_2
+  - REGION_C2_3
+  approach_id: C2_3/FROM_SOUTH
+- id: C2_3->C2_2
+  from_anchor_id: ANCHOR_C2_3
+  to_anchor_id: ANCHOR_C2_2
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 2.8
+    yaw_rad: -1.5707963267948966
+  - x_m: 2.0
+    y_m: 2.0
+    yaw_rad: -1.5707963267948966
+  permitted_region_ids:
+  - REGION_C2_3
+  - REGION_C2_2
+  approach_id: C2_2/FROM_NORTH
+- id: C3_2->C4_2
+  from_anchor_id: ANCHOR_C3_2
+  to_anchor_id: ANCHOR_C4_2
+  movement: STRAIGHT
+  path:
+  - x_m: 2.8
+    y_m: 2.0
+    yaw_rad: 0.0
+  - x_m: 3.6
+    y_m: 2.0
+    yaw_rad: 0.0
+  permitted_region_ids:
+  - REGION_C3_2
+  - REGION_C4_2
+  approach_id: C4_2/FROM_WEST
+- id: C4_2->C3_2
+  from_anchor_id: ANCHOR_C4_2
+  to_anchor_id: ANCHOR_C3_2
+  movement: STRAIGHT
+  path:
+  - x_m: 3.6
+    y_m: 2.0
+    yaw_rad: 3.141592653589793
+  - x_m: 2.8
+    y_m: 2.0
+    yaw_rad: 3.141592653589793
+  permitted_region_ids:
+  - REGION_C4_2
+  - REGION_C3_2
+  approach_id: C3_2/FROM_EAST
+- id: C4_2->C4_3
+  from_anchor_id: ANCHOR_C4_2
+  to_anchor_id: ANCHOR_C4_3
+  movement: STRAIGHT
+  path:
+  - x_m: 3.6
+    y_m: 2.0
+    yaw_rad: 1.5707963267948966
+  - x_m: 3.6
+    y_m: 2.8
+    yaw_rad: 1.5707963267948966
+  permitted_region_ids:
+  - REGION_C4_2
+  - REGION_C4_3
+  approach_id: C4_3/FROM_SOUTH
+- id: C4_3->C4_2
+  from_anchor_id: ANCHOR_C4_3
+  to_anchor_id: ANCHOR_C4_2
+  movement: STRAIGHT
+  path:
+  - x_m: 3.6
+    y_m: 2.8
+    yaw_rad: -1.5707963267948966
+  - x_m: 3.6
+    y_m: 2.0
+    yaw_rad: -1.5707963267948966
+  permitted_region_ids:
+  - REGION_C4_3
+  - REGION_C4_2
+  approach_id: C4_2/FROM_NORTH
+- id: C0_3->C0_4
+  from_anchor_id: ANCHOR_C0_3
+  to_anchor_id: ANCHOR_C0_4
+  movement: STRAIGHT
+  path:
+  - x_m: 0.4
+    y_m: 2.8
+    yaw_rad: 1.5707963267948966
+  - x_m: 0.4
+    y_m: 3.6
+    yaw_rad: 1.5707963267948966
+  permitted_region_ids:
+  - REGION_C0_3
+  - REGION_C0_4
+  approach_id: C0_4/FROM_SOUTH
+- id: C0_4->C0_3
+  from_anchor_id: ANCHOR_C0_4
+  to_anchor_id: ANCHOR_C0_3
+  movement: STRAIGHT
+  path:
+  - x_m: 0.4
+    y_m: 3.6
+    yaw_rad: -1.5707963267948966
+  - x_m: 0.4
+    y_m: 2.8
+    yaw_rad: -1.5707963267948966
+  permitted_region_ids:
+  - REGION_C0_4
+  - REGION_C0_3
+  approach_id: C0_3/FROM_NORTH
+- id: C2_3->C2_4
+  from_anchor_id: ANCHOR_C2_3
+  to_anchor_id: ANCHOR_C2_4
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 2.8
+    yaw_rad: 1.5707963267948966
+  - x_m: 2.0
+    y_m: 3.6
+    yaw_rad: 1.5707963267948966
+  permitted_region_ids:
+  - REGION_C2_3
+  - REGION_C2_4
+  approach_id: C2_4/FROM_SOUTH
+- id: C2_4->C2_3
+  from_anchor_id: ANCHOR_C2_4
+  to_anchor_id: ANCHOR_C2_3
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 3.6
+    yaw_rad: -1.5707963267948966
+  - x_m: 2.0
+    y_m: 2.8
+    yaw_rad: -1.5707963267948966
+  permitted_region_ids:
+  - REGION_C2_4
+  - REGION_C2_3
+  approach_id: C2_3/FROM_NORTH
+- id: C4_3->C4_4
+  from_anchor_id: ANCHOR_C4_3
+  to_anchor_id: ANCHOR_C4_4
+  movement: STRAIGHT
+  path:
+  - x_m: 3.6
+    y_m: 2.8
+    yaw_rad: 1.5707963267948966
+  - x_m: 3.6
+    y_m: 3.6
+    yaw_rad: 1.5707963267948966
+  permitted_region_ids:
+  - REGION_C4_3
+  - REGION_C4_4
+  approach_id: C4_4/FROM_SOUTH
+- id: C4_4->C4_3
+  from_anchor_id: ANCHOR_C4_4
+  to_anchor_id: ANCHOR_C4_3
+  movement: STRAIGHT
+  path:
+  - x_m: 3.6
+    y_m: 3.6
+    yaw_rad: -1.5707963267948966
+  - x_m: 3.6
+    y_m: 2.8
+    yaw_rad: -1.5707963267948966
+  permitted_region_ids:
+  - REGION_C4_4
+  - REGION_C4_3
+  approach_id: C4_3/FROM_NORTH
+- id: C0_4->C1_4
+  from_anchor_id: ANCHOR_C0_4
+  to_anchor_id: ANCHOR_C1_4
+  movement: STRAIGHT
+  path:
+  - x_m: 0.4
+    y_m: 3.6
+    yaw_rad: 0.0
+  - x_m: 1.2
+    y_m: 3.6
+    yaw_rad: 0.0
+  permitted_region_ids:
+  - REGION_C0_4
+  - REGION_C1_4
+  approach_id: C1_4/FROM_WEST
+- id: C1_4->C0_4
+  from_anchor_id: ANCHOR_C1_4
+  to_anchor_id: ANCHOR_C0_4
+  movement: STRAIGHT
+  path:
+  - x_m: 1.2
+    y_m: 3.6
+    yaw_rad: 3.141592653589793
+  - x_m: 0.4
+    y_m: 3.6
+    yaw_rad: 3.141592653589793
+  permitted_region_ids:
+  - REGION_C1_4
+  - REGION_C0_4
+  approach_id: C0_4/FROM_EAST
+- id: C1_4->C2_4
+  from_anchor_id: ANCHOR_C1_4
+  to_anchor_id: ANCHOR_C2_4
+  movement: STRAIGHT
+  path:
+  - x_m: 1.2
+    y_m: 3.6
+    yaw_rad: 0.0
+  - x_m: 2.0
+    y_m: 3.6
+    yaw_rad: 0.0
+  permitted_region_ids:
+  - REGION_C1_4
+  - REGION_C2_4
+  approach_id: C2_4/FROM_WEST
+- id: C2_4->C1_4
+  from_anchor_id: ANCHOR_C2_4
+  to_anchor_id: ANCHOR_C1_4
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 3.6
+    yaw_rad: 3.141592653589793
+  - x_m: 1.2
+    y_m: 3.6
+    yaw_rad: 3.141592653589793
+  permitted_region_ids:
+  - REGION_C2_4
+  - REGION_C1_4
+  approach_id: C1_4/FROM_EAST
+- id: C2_4->C3_4
+  from_anchor_id: ANCHOR_C2_4
+  to_anchor_id: ANCHOR_C3_4
+  movement: STRAIGHT
+  path:
+  - x_m: 2.0
+    y_m: 3.6
+    yaw_rad: 0.0
+  - x_m: 2.8
+    y_m: 3.6
+    yaw_rad: 0.0
+  permitted_region_ids:
+  - REGION_C2_4
+  - REGION_C3_4
+  approach_id: C3_4/FROM_WEST
+- id: C3_4->C2_4
+  from_anchor_id: ANCHOR_C3_4
+  to_anchor_id: ANCHOR_C2_4
+  movement: STRAIGHT
+  path:
+  - x_m: 2.8
+    y_m: 3.6
+    yaw_rad: 3.141592653589793
+  - x_m: 2.0
+    y_m: 3.6
+    yaw_rad: 3.141592653589793
+  permitted_region_ids:
+  - REGION_C3_4
+  - REGION_C2_4
+  approach_id: C2_4/FROM_EAST
+- id: C3_4->C4_4
+  from_anchor_id: ANCHOR_C3_4
+  to_anchor_id: ANCHOR_C4_4
+  movement: STRAIGHT
+  path:
+  - x_m: 2.8
+    y_m: 3.6
+    yaw_rad: 0.0
+  - x_m: 3.6
+    y_m: 3.6
+    yaw_rad: 0.0
+  permitted_region_ids:
+  - REGION_C3_4
+  - REGION_C4_4
+  approach_id: C4_4/FROM_WEST
+- id: C4_4->C3_4
+  from_anchor_id: ANCHOR_C4_4
+  to_anchor_id: ANCHOR_C3_4
+  movement: STRAIGHT
+  path:
+  - x_m: 3.6
+    y_m: 3.6
+    yaw_rad: 3.141592653589793
+  - x_m: 2.8
+    y_m: 3.6
+    yaw_rad: 3.141592653589793
+  permitted_region_ids:
+  - REGION_C4_4
+  - REGION_C3_4
+  approach_id: C3_4/FROM_EAST
+observation_regions:
+- id: OBS_B2_FROM_A2
+  polygon:
+  - - 0.32
+    - 1.1199999999999999
+  - - 0.48000000000000004
+    - 1.1199999999999999
+  - - 0.48000000000000004
+    - 1.28
+  - - 0.32
+    - 1.28
+  anchor_id: ANCHOR_C0_1
+  nominal_heading_rad: 0.0
+  heading_tolerance_rad: 0.35
+- id: OBS_B2_FROM_C2
+  polygon:
+  - - 1.92
+    - 1.1199999999999999
+  - - 2.08
+    - 1.1199999999999999
+  - - 2.08
+    - 1.28
+  - - 1.92
+    - 1.28
+  anchor_id: ANCHOR_C2_1
+  nominal_heading_rad: 3.141592653589793
+  heading_tolerance_rad: 0.35
+- id: OBS_B2_FROM_B1
+  polygon:
+  - - 1.1199999999999999
+    - 0.32
+  - - 1.28
+    - 0.32
+  - - 1.28
+    - 0.48000000000000004
+  - - 1.1199999999999999
+    - 0.48000000000000004
+  anchor_id: ANCHOR_C1_0
+  nominal_heading_rad: 1.5707963267948966
+  heading_tolerance_rad: 0.35
+- id: OBS_B2_FROM_B3
+  polygon:
+  - - 1.1199999999999999
+    - 1.92
+  - - 1.28
+    - 1.92
+  - - 1.28
+    - 2.08
+  - - 1.1199999999999999
+    - 2.08
+  anchor_id: ANCHOR_C1_2
+  nominal_heading_rad: 4.71238898038469
+  heading_tolerance_rad: 0.35
+- id: OBS_D2_FROM_C2
+  polygon:
+  - - 1.92
+    - 1.1199999999999999
+  - - 2.08
+    - 1.1199999999999999
+  - - 2.08
+    - 1.28
+  - - 1.92
+    - 1.28
+  anchor_id: ANCHOR_C2_1
+  nominal_heading_rad: 0.0
+  heading_tolerance_rad: 0.35
+- id: OBS_D2_FROM_E2
+  polygon:
+  - - 3.52
+    - 1.1199999999999999
+  - - 3.68
+    - 1.1199999999999999
+  - - 3.68
+    - 1.28
+  - - 3.52
+    - 1.28
+  anchor_id: ANCHOR_C4_1
+  nominal_heading_rad: 3.141592653589793
+  heading_tolerance_rad: 0.35
+- id: OBS_D2_FROM_D1
+  polygon:
+  - - 2.7199999999999998
+    - 0.32
+  - - 2.88
+    - 0.32
+  - - 2.88
+    - 0.48000000000000004
+  - - 2.7199999999999998
+    - 0.48000000000000004
+  anchor_id: ANCHOR_C3_0
+  nominal_heading_rad: 1.5707963267948966
+  heading_tolerance_rad: 0.35
+- id: OBS_D2_FROM_D3
+  polygon:
+  - - 2.7199999999999998
+    - 1.92
+  - - 2.88
+    - 1.92
+  - - 2.88
+    - 2.08
+  - - 2.7199999999999998
+    - 2.08
+  anchor_id: ANCHOR_C3_2
+  nominal_heading_rad: 4.71238898038469
+  heading_tolerance_rad: 0.35
+- id: OBS_B4_FROM_A4
+  polygon:
+  - - 0.32
+    - 2.7199999999999998
+  - - 0.48000000000000004
+    - 2.7199999999999998
+  - - 0.48000000000000004
+    - 2.88
+  - - 0.32
+    - 2.88
+  anchor_id: ANCHOR_C0_3
+  nominal_heading_rad: 0.0
+  heading_tolerance_rad: 0.35
+- id: OBS_B4_FROM_C4
+  polygon:
+  - - 1.92
+    - 2.7199999999999998
+  - - 2.08
+    - 2.7199999999999998
+  - - 2.08
+    - 2.88
+  - - 1.92
+    - 2.88
+  anchor_id: ANCHOR_C2_3
+  nominal_heading_rad: 3.141592653589793
+  heading_tolerance_rad: 0.35
+- id: OBS_B4_FROM_B3
+  polygon:
+  - - 1.1199999999999999
+    - 1.92
+  - - 1.28
+    - 1.92
+  - - 1.28
+    - 2.08
+  - - 1.1199999999999999
+    - 2.08
+  anchor_id: ANCHOR_C1_2
+  nominal_heading_rad: 1.5707963267948966
+  heading_tolerance_rad: 0.35
+- id: OBS_B4_FROM_B5
+  polygon:
+  - - 1.1199999999999999
+    - 3.52
+  - - 1.28
+    - 3.52
+  - - 1.28
+    - 3.68
+  - - 1.1199999999999999
+    - 3.68
+  anchor_id: ANCHOR_C1_4
+  nominal_heading_rad: 4.71238898038469
+  heading_tolerance_rad: 0.35
+- id: OBS_D4_FROM_C4
+  polygon:
+  - - 1.92
+    - 2.7199999999999998
+  - - 2.08
+    - 2.7199999999999998
+  - - 2.08
+    - 2.88
+  - - 1.92
+    - 2.88
+  anchor_id: ANCHOR_C2_3
+  nominal_heading_rad: 0.0
+  heading_tolerance_rad: 0.35
+- id: OBS_D4_FROM_E4
+  polygon:
+  - - 3.52
+    - 2.7199999999999998
+  - - 3.68
+    - 2.7199999999999998
+  - - 3.68
+    - 2.88
+  - - 3.52
+    - 2.88
+  anchor_id: ANCHOR_C4_3
+  nominal_heading_rad: 3.141592653589793
+  heading_tolerance_rad: 0.35
+- id: OBS_D4_FROM_D3
+  polygon:
+  - - 2.7199999999999998
+    - 1.92
+  - - 2.88
+    - 1.92
+  - - 2.88
+    - 2.08
+  - - 2.7199999999999998
+    - 2.08
+  anchor_id: ANCHOR_C3_2
+  nominal_heading_rad: 1.5707963267948966
+  heading_tolerance_rad: 0.35
+- id: OBS_D4_FROM_D5
+  polygon:
+  - - 2.7199999999999998
+    - 3.52
+  - - 2.88
+    - 3.52
+  - - 2.88
+    - 3.68
+  - - 2.7199999999999998
+    - 3.68
+  anchor_id: ANCHOR_C3_4
+  nominal_heading_rad: 4.71238898038469
+  heading_tolerance_rad: 0.35
+sign_sites:
+- id: SIGN_B2_SW
+  position:
+  - 0.86
+  - 0.86
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_B2_SE
+  position:
+  - 1.54
+  - 0.86
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_B2_NE
+  position:
+  - 1.54
+  - 1.54
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_B2_NW
+  position:
+  - 0.86
+  - 1.54
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_D2_SW
+  position:
+  - 2.46
+  - 0.86
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_D2_SE
+  position:
+  - 3.14
+  - 0.86
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_D2_NE
+  position:
+  - 3.14
+  - 1.54
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_D2_NW
+  position:
+  - 2.46
+  - 1.54
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_B4_SW
+  position:
+  - 0.86
+  - 2.46
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_B4_SE
+  position:
+  - 1.54
+  - 2.46
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_B4_NE
+  position:
+  - 1.54
+  - 3.14
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_B4_NW
+  position:
+  - 0.86
+  - 3.14
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_D4_SW
+  position:
+  - 2.46
+  - 2.46
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_D4_SE
+  position:
+  - 3.14
+  - 2.46
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_D4_NE
+  position:
+  - 3.14
+  - 3.14
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+- id: SIGN_D4_NW
+  position:
+  - 2.46
+  - 3.14
+  faces:
+  - id: FACE_0
+    yaw_rad: 0.0
+    controlled_approach_id: ''
+  - id: FACE_1
+    yaw_rad: 1.5707963267948966
+    controlled_approach_id: ''
+  - id: FACE_2
+    yaw_rad: 3.141592653589793
+    controlled_approach_id: ''
+  - id: FACE_3
+    yaw_rad: 4.71238898038469
+    controlled_approach_id: ''
+gates: []

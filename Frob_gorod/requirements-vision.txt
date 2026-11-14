@@ -1,0 +1,2 @@
+# Version recorded in the final offboard environment.
+ultralytics==8.4.26

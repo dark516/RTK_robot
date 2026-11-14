@@ -1,0 +1,22 @@
+schema_version: 2
+camera_frame: camera_optical_frame
+calibration_id: USER_CAMERA_RANGE_CALIBRATED_2026-09-13
+label_map:
+  straight: STRAIGHT_ONLY
+  left: LEFT_ONLY
+  right: RIGHT_ONLY
+  no_left: NO_LEFT
+  no_right: NO_RIGHT
+  bus_stop: BUS_STOP
+  parking: PARKING
+  obstacle: HAZARD_MARKER
+  hazard: HAZARD_MARKER
+confidence_thresholds:
+  STRAIGHT_ONLY: 0.80
+  LEFT_ONLY: 0.80
+  RIGHT_ONLY: 0.80
+  NO_LEFT: 0.80
+  NO_RIGHT: 0.80
+  BUS_STOP: 0.40
+  PARKING: 0.60
+  HAZARD_MARKER: 0.80

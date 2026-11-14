@@ -1,0 +1,20 @@
+{
+  "action/Observe.action": "a1207f9ccdd607b852e2e92ee7a9014c30a311dd24d670085d7dbe99d9d76af8",
+  "msg/ApproachState.msg": "1c5cca76a3ade769ad3088c3ed866f2882ea0ece56e45d9b71eb37f6f4fd4c2e",
+  "msg/CoverageState.msg": "55d90328de1675c0ded90cc04c333466286801b4aaecdd068fff64a1f7b4c801",
+  "msg/EdgeState.msg": "39bc81a808045cb9e54ae1004ebaf46b0abfc5a102eaab9ce89660f9286491a0",
+  "msg/GuardState.msg": "7fee28d6dcadbf5bbde5364842556f3b351dc215a7cfad6ac1023f0561342344",
+  "msg/KnownSignState.msg": "1de6924cd456a7cbfcf8719c37b94c02058d2a0a63c29ef4a514696f6e9db1e2",
+  "msg/MapState.msg": "0f9d90c1048997ae849c79a689c3a55cfeb810c3c2dfd909a75831e27d36ac76",
+  "msg/MissionState.msg": "30d2770c362be7a667ffe029e052c4ca242aabb9fe3c7dabe587d0d9a34182ed",
+  "msg/MotionPermit.msg": "02ae31aa64ac912fffaf19c57ae30f74c8c0f3f278c8daa6014ecc25af0aeabc",
+  "msg/RouteSegment.msg": "77e26b9db190f8b52ad8b9bfa46ccc805f0a94f9dade011d1c0da4264b56cf6d",
+  "msg/SignDetection.msg": "c4135e7ee3ac03c08b501c5710be10988c058d896d72a31e4abc4769066df85c",
+  "msg/SignDetectionArray.msg": "90a88dc2981f024c07aa835cd358220b4b49b31daffe1c6bb6cff2677cbad0a6",
+  "msg/TargetState.msg": "20af1ee63d5cf328b7d0ad2544624e64b7c0c91b0fb560ea671cc7798d46c89a",
+  "srv/ControlMission.srv": "3751a7243eae1c251c89115b88b24b53689d28788221446571f1bcc7bc342a07",
+  "srv/PlanRoute.srv": "fdc6548fa02fb2e8404ac09bfb21ebe499bf837100fa106fea53a2c63f2cab12",
+  "srv/ReportExecution.srv": "f37fef0932a6aa36d5a99f419ed052c5c002fac9f784f170bf8d1b93421484ab",
+  "srv/ResetMap.srv": "478875709112e48d137fcdf3316664a9bebc7ce069d3f775328297ed95219526",
+  "srv/ValidateSegment.srv": "78a3c95f38baafcde2e70bb23a0c2fece799b86e9089947e70a3e606c51efac8"
+}

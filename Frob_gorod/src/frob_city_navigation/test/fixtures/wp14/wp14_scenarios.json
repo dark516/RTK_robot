@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "hardware_access": false,
+  "domains": {
+    "protocol_smoke": 141,
+    "map_observation": 142,
+    "full_mission": 143,
+    "failure_matrix": 144,
+    "nav2_sim": 145
+  },
+  "full_mission": {
+    "required_unique_bus_stops": 2,
+    "targets": [
+      {"id": "BUS_STOP:A:FACE", "kind": "BUS_STOP", "x_m": 1.0},
+      {"id": "BUS_STOP:B:FACE", "kind": "BUS_STOP", "x_m": 2.0},
+      {"id": "PARKING:P:FACE", "kind": "PARKING", "x_m": 3.0}
+    ],
+    "expected_nav2_goals": 3,
+    "expected_execution_reports": 3,
+    "expected_final_phase": "DONE"
+  },
+  "failure_cases": [
+    "nav2_reject",
+    "nav2_abort",
+    "stale_odom",
+    "map_identity_change",
+    "system_readiness_loss"
+  ],
+  "replay_repetitions": 20
+}

@@ -1,0 +1,11 @@
+std_msgs/Header header
+string run_id
+string map_instance_id
+string navigator_instance_id
+uint64 goal_generation
+uint64 last_permission_sequence
+string active_segment_id
+bool motion_allowed
+bool stopped
+bool fault_latched
+string reason

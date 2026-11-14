@@ -1,0 +1,39 @@
+frob_city_web:
+  ros__parameters:
+    http_host: "0.0.0.0"
+    http_port: 8080
+    map_frame: "map"
+    base_frame: "base_footprint"
+    map_topic: "/map"
+    odom_topic: "/odom"
+    map_state_topic: "/city/map_state"
+    mission_state_topic: "/city/mission_state"
+    planned_route_topic: "/city/planned_route"
+    guard_state_topic: "/city/guard_state"
+    motion_permit_topic: "/city/motion_permit"
+    detections_topic: "/traffic_sign/detections"
+    annotated_image_topic: "/traffic_sign/annotated_image"
+    annotated_compressed_topic: "/traffic_sign/annotated_image/compressed"
+    diagnostics_topic: "/diagnostics"
+    map_planner_diagnostics_topic: "/city/map_planner_diagnostics"
+    raw_cmd_topic: "/city/cmd_vel_raw"
+    final_cmd_topic: "/cmd_vel"
+    control_service: "/city/control_mission"
+    camera_max_fps: 5.0
+    camera_jpeg_quality: 70
+    control_timeout_s: 2.0
+    state_stale_s: 2.0
+    motion_stale_s: 0.5
+    camera_stale_s: 2.0
+    delta_history_limit: 256
+    event_history_limit: 250
+    trail_history_limit: 500
+    field_config_path: ""
+    event_config_path: ""
+    perception_config_path: ""
+    navigation_config_path: ""
+    calibration_root: "~/Frob_gorod/calibration"
+    calibration_map_roots:
+      - "~/Frob_gorod/src/frob_navigation/maps"
+      - "~/Frob_gorod/install/frob_navigation/share/frob_navigation/maps"
+    calibration_live_map_stale_s: 2.0

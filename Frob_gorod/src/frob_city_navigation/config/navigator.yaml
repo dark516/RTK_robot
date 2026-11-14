@@ -1,0 +1,35 @@
+/**:
+  ros__parameters:
+    map_frame: map
+    map_topic: /city/map_state
+    odom_topic: /odom
+    guard_state_topic: /city/guard_state
+    permit_topic: /city/motion_permit
+    mission_state_topic: /city/mission_state
+    control_service: /city/control_mission
+    reset_map_service: /city/reset_map
+    plan_service: /city/plan_route
+    validate_service: /city/validate_segment
+    report_service: /city/report_execution
+    observe_action: /city/observe
+    follow_path_action: /follow_path
+    controller_id: ''
+    goal_checker_id: ''
+    progress_checker_id: ''
+    reset_map_on_start: true
+    required_unique_bus_stops: 2
+    parking_prior_enabled: false
+    parking_prior_observation_id: ''
+    permit_hz: 10.0
+    permit_valid_for_s: 0.20
+    state_hz: 5.0
+    verification_hz: 20.0
+    map_max_age_s: 1.0
+    odom_max_age_s: 0.30
+    guard_max_age_s: 0.30
+    terminal_verify_timeout_s: 2.0
+    execution_readiness_timeout_s: 2.0
+    boarding_dwell_s: 2.2
+    stationary_linear_max_mps: 0.01
+    stationary_angular_max_radps: 0.03
+    observation_duration_s: 3.0

@@ -1,0 +1,16 @@
+# Canonical WP13 observability set. record_city_bag.zsh records this exact set.
+topics:
+  - /city/map_state
+  - /city/mission_state
+  - /city/guard_state
+  - /city/motion_permit
+  - /city/system_ready
+  - /city/diagnostics
+  - /city/config_fingerprint
+  - /city/map_planner_diagnostics
+  - /traffic_sign/detections
+  - /city/cmd_vel_raw
+  - /cmd_vel
+  - /odom
+  - /tf
+  - /tf_static

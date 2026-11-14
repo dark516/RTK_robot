@@ -1,0 +1,68 @@
+# WP11 COMPONENT TEST FIXTURE ONLY. NOT COMPETITION-CALIBRATED.
+schema_version: 2
+frame_id: map
+field_size_m: [4.0, 4.0]
+geometry_calibrated: true
+field_to_map:
+  x_m: 0.0
+  y_m: 0.0
+  yaw_rad: 0.0
+  valid: true
+footprint:
+  - [-0.15, -0.15]
+  - [0.15, -0.15]
+  - [0.15, 0.15]
+  - [-0.15, 0.15]
+drivable_regions:
+  - id: TEST_ROAD
+    polygon:
+      - [0.0, 0.0]
+      - [1.6, 0.0]
+      - [1.6, 0.8]
+      - [0.0, 0.8]
+platforms:
+  - id: TEST_PLATFORM
+    polygon:
+      - [0.8, 0.8]
+      - [1.6, 0.8]
+      - [1.6, 1.6]
+      - [0.8, 1.6]
+anchors:
+  - id: A_START
+    cell_id: C0_0
+    pose: {x_m: 0.4, y_m: 0.4, yaw_rad: 0.0}
+  - id: A_EAST
+    cell_id: C1_0
+    pose: {x_m: 1.2, y_m: 0.4, yaw_rad: 0.0}
+gates:
+  - id: GATE_EAST
+    pose: {x_m: 1.0, y_m: 0.4, yaw_rad: 0.0}
+edges:
+  - id: C0_0->C1_0
+    from_anchor_id: A_START
+    to_anchor_id: A_EAST
+    movement: STRAIGHT
+    path:
+      - {x_m: 0.4, y_m: 0.4, yaw_rad: 0.0}
+      - {x_m: 0.8, y_m: 0.4, yaw_rad: 0.0}
+      - {x_m: 1.2, y_m: 0.4, yaw_rad: 0.0}
+    permitted_region_ids: [TEST_ROAD]
+    approach_id: C1_0/FROM_WEST
+    commitment_gate_id: GATE_EAST
+observation_regions:
+  - id: OBS_EAST
+    polygon:
+      - [0.45, 0.25]
+      - [0.70, 0.25]
+      - [0.70, 0.55]
+      - [0.45, 0.55]
+    anchor_id: A_START
+    nominal_heading_rad: 0.0
+    heading_tolerance_rad: 0.25
+sign_sites:
+  - id: SITE_0
+    position: [0.9, 0.0]
+    faces:
+      - id: FACE_W
+        yaw_rad: 3.141592653589793
+        controlled_approach_id: C1_0/FROM_WEST

@@ -1,0 +1,11 @@
+traffic_sign_camera_streamer:
+  ros__parameters:
+    camera_index: 0
+    frame_width: 1280
+    frame_height: 720
+    # Keep capture just below measured laptop inference throughput (~4.55 FPS)
+    # so DDS never accumulates stale frames while the robot is moving.
+    camera_fps: 4.0
+    camera_frame_id: "camera"
+    jpeg_quality: 72
+    compressed_image_topic: "/camera/image_raw/compressed"

@@ -1,0 +1,10 @@
+std_msgs/Header header
+string run_id
+string map_instance_id
+string navigator_instance_id
+string field_id
+uint64 goal_generation
+uint64 sequence
+bool enabled
+float32 valid_for_s
+frob_city_interfaces/RouteSegment segment

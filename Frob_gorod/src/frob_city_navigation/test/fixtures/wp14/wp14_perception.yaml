@@ -1,0 +1,22 @@
+# WP11 COMPONENT TEST FIXTURE ONLY. NOT COMPETITION-CALIBRATED.
+schema_version: 2
+camera_frame: camera_optical_frame
+calibration_id: TEST_ONLY
+label_map:
+  straight: STRAIGHT_ONLY
+  left: LEFT_ONLY
+  right: RIGHT_ONLY
+  no_left: NO_LEFT
+  no_right: NO_RIGHT
+  bus_stop: BUS_STOP
+  parking: PARKING
+  hazard: HAZARD_MARKER
+confidence_thresholds:
+  STRAIGHT_ONLY: 0.65
+  LEFT_ONLY: 0.65
+  RIGHT_ONLY: 0.65
+  NO_LEFT: 0.65
+  NO_RIGHT: 0.65
+  BUS_STOP: 0.65
+  PARKING: 0.65
+  HAZARD_MARKER: 0.65

@@ -1,0 +1,15 @@
+std_msgs/Header header
+string run_id
+string map_instance_id
+string field_id
+uint64 revision
+bool ready
+bool perception_healthy
+bool localization_healthy
+string[] precautionary_hold_ids
+frob_city_interfaces/ApproachState[] approaches
+frob_city_interfaces/KnownSignState[] known_signs
+frob_city_interfaces/TargetState[] targets
+frob_city_interfaces/EdgeState[] edges
+frob_city_interfaces/CoverageState[] coverage
+string reason

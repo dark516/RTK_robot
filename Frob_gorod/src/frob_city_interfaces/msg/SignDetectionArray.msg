@@ -1,0 +1,9 @@
+std_msgs/Header header
+string detector_instance_id
+uint64 frame_sequence
+uint32 image_width_px
+uint32 image_height_px
+string calibration_id
+bool frame_valid
+string invalid_reason
+frob_city_interfaces/SignDetection[] detections
